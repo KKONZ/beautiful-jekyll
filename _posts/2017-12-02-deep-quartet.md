@@ -5,9 +5,17 @@ title: Deep Quartet
 ---
 # Music Generation with Deep Neural Networks
 
+## Inspiration 
+
 This post will expand on the research done for the DeepBach project from Sony CSL and broaden the corpus to not only Bach Chorales but also include string quartets scrapped from the web site KunstDerFuge with Selenium using the Python wrapper.
 
+
+
+
 The base version of this code is available here:...
+
+For an overview of their DeepBach project with sample output, see the url HERE [I'm an inline-style link]http://www.flow-machines.com/deepbach-polyphonic-music-generation-bach-chorales/.
+
 
 To scrape the additional files for the training corpus follow my github repo here:...
 http://kunstderfuge.com/
