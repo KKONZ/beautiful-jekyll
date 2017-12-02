@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Deep Quartet
 ---
 # Music Generation with Deep Neural Networks
@@ -28,4 +28,4 @@ The core project use the default optimization settings. The learning rate looked
 
 ## A. Reharmonizing Bach theme with Chorale/String Chorale corpus
 
-This is a compositional approach that has been around for hundreds of years, in which a composer will that the theme of an eariler peroid composer and reharmonize the general theme of the earlier piece. For the first model we try lets tak 
+This is a compositional approach that has been around for hundreds of years, in which a composer will that the theme of an eariler peroid composer and reharmonize the general theme of the earlier piece. For the first model we try lets tak
