@@ -20,14 +20,12 @@ One of the constraints of this modeling techinque is that there has to be the sa
 
 To gather the additional string quartet midi files, I wrote a script to scrape the files I wanted from site [Kunst Der Fuge](http://kunstderfuge.com/) with [Selenium](http://selenium-python.readthedocs.io/) using the Python wrapper to authenticate into the site and download the files of interest.
 
-The original source code from deepBach is available [here]. 
+The original source code from deepBach is available [here] and the corpus for that research is readily availble in the music21 package.
+
 In addition to the string quartets I also downloaded a Kashmir and Going to California from Led Zeppelin to use for reharmonizing.
 
+I had issues running the source code on my windows machine and ended up having to just hard code the pickled data set path and name instead of using the os python package. If you are using a windows or a linux machine the code below should work for you.
 An easy way of running this code is to launch an Azure Deep Learning VM, clone the repo, and start training away! I have had issues running the code and chose to hard code the pickle path for custom datasets in my version of the repo.
-
-# Data
-
-Starting with Bach to train music makes a lot of sense to me. Bach's approach to composition was more conservative and restrictive than many later composers. Compositional rules and constraints gradually peeled away through the years up to more recent abrast compositions which are not included in the training corpus for this post. There is a lot of overlap from the roughly 150-200 year peroid of music that I have included in terms of theory so I expect for the output to be be compelling and different than that of just training on Bach.
 
 # Modeling 
 
