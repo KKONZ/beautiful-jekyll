@@ -57,7 +57,7 @@ Going to California:
 ![alt text](/img/GoingToCali-1.png "Going to California")
 
 Kashmir:
-![alt text](/img/Kashmir-1.png "Kashmir")
+![alt text](/img/Kashmir.jpg "Kashmir")
 
 
 
