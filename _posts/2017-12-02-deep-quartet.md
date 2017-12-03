@@ -16,7 +16,7 @@ For this post I will explore the limits of the [deepBach](https://arxiv.org/abs/
 
 ## Additional data, string quartets
 
-One of the constraints of this modeling techinque is that there has to be the same number of voices for each training composition. The Bach files used for the initial research have four voices. In addition to these files I am adding string quartet midi files from ... look up all of the composers downloaded, resulting in an increased corpus of roughly ~%.
+One of the constraints of this modeling techinque is that there has to be the same number of voices for each training composition. The Bach files used for the initial research have four voices. In addition to these files I am added 189 string quartet midi files from Beethoven, Mozart, Shostakovich, Brahms, Schumann, and Schubert, resulting in an increased training corpus of roughly +50% from what was used in the research paper. 
 
 To gather the additional string quartet midi files, I wrote a script to scrape the files I wanted from site [Kunst Der Fuge](http://kunstderfuge.com/) with [Selenium](http://selenium-python.readthedocs.io/) using the Python wrapper to authenticate into the site and download the files of interest.
 
