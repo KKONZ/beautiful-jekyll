@@ -54,6 +54,7 @@ Next I added Kashmir led zeppelin track and reharmonized the model to that track
 
 
 Going to California:
+
 ![alt text](/img/GoingToCali.PNG "Going to California")
 
 
@@ -64,7 +65,7 @@ Kashmir:
 ![alt text](/img/Kashmir.png "Kashmir")
 
 
-<iframe width="420" height="315" src="https://www.youtube.com/watch?v=6t_Dh12lRh4&feature=youtu.be" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6t_Dh12lRh4?ecver=1" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 
 
 
