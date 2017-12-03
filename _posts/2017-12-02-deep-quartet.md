@@ -34,20 +34,13 @@ I had issues running the source code on my windows machine and ended up having t
 An easy way of running this code is to launch an Azure Deep Learning VM, clone the repo, and start training away! I have had issues running the code and chose to hard code the pickle path for custom datasets in my version of the repo.
 Regardless of the platform you choose to use if interested in running this code, you can clone the project while it is on my github page. Note that this version does not use Keras 2 yet.
 
-```
-git clone "http://github.com/kkonz/DeepBach"
-```
-
 After cloning the github repository you will also need to download a couple libraries
 
-[music21](http://web.mit.edu/music21/):
+[music21](http://web.mit.edu/music21/) and [tqdm](https://pypi.python.org/pypi/tqdm):
 
-```
+```python
+git clone "http://github.com/kkonz/DeepBach"
 pip install music21
-```
-[tqdm](https://pypi.python.org/pypi/tqdm):
-
-```
 pip install tqdm
 ```
 
