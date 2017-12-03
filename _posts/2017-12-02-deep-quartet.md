@@ -36,13 +36,13 @@ This approach utilizes Stacked LSTM models and psuedo-gibbs sampling. To learn m
 This project utilizes tensorflow and Keras. It embedds the data into a one hot array for the music in a sparse representation. It uses an Adam Optimizer and ... erorr testing (db check cross entropy??)
 
 
-```{python, engine='bash', count_lines}
+```{r, engine='bash', count_lines} # Use r engine in this call, but is actually python code
 git clone 'http://github.com/kkonz/DeepBach
 ```
 
 After navigating to the new created deepBach directory, which created the first model for my first example below the code
 
-```{python, engine='bash', count_lines}
+```{r, engine='bash', count_lines} # Use r engine in this call, but is actually python code
 python3 deepBach.py --dataset datasets/custom_dataset --ext ReharmonizeBachxxxx - 200 200 -d 200 -t 10 -p -i 40000 -r 45 -o 'ReharmBWVxxx.mid'
 ```
 
