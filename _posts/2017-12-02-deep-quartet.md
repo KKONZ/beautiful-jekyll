@@ -63,7 +63,7 @@ usage: deepBach.py [-h] [--timesteps TIMESTEPS] [-b BATCH_SIZE_TRAIN]
 optional arguments:
   -h, --help            show this help message and exit
   --timesteps TIMESTEPS
-                        model's range (default: 16)
+                        models range (default: 16)
   -b BATCH_SIZE_TRAIN, --batch_size_train BATCH_SIZE_TRAIN
                         batch size used during training phase (default: 128)
   -s SAMPLES_PER_EPOCH, --samples_per_epoch SAMPLES_PER_EPOCH
