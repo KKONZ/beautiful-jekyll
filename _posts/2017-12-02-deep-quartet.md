@@ -16,7 +16,7 @@ The base version of this code is available here:...
 
 For an overview of their DeepBach project with sample output, see the url HERE 
 
-[I'm an inline-style link]http://www.flow-machines.com/deepbach-polyphonic-music-generation-bach-chorales/.
+[I'm an inline-style link] http://www.flow-machines.com/deepbach-polyphonic-music-generation-bach-chorales/.
 
 
 To scrape the additional files for the training corpus follow my github repo here:...
