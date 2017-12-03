@@ -19,7 +19,7 @@ Inline:
 )
 
 [![IMAGE ALT TEXT HERE](/img/DeepBachImg1.jpg "Deep Bach")]
-(https://soundcloud.com/postmalone/rockstar-feat-21-savage)
+(https://www.youtube.com/watch?v=VSEcQ7QqW4c)
 
 The base version of this code is available here:...
 
