@@ -51,9 +51,10 @@ Which produces the output below:
 Next I added Kashmir led zeppelin track and reharmonized the model to that track and going to california as well, both were trained in the same manner as the code above, but were delibrately named in a way to be indexed in the first position. Here are sample outputs from those models:
 
 Kashmir:
-
+![alt text](/img/Kashmir.pdf "Kashmir")
 
 Going to California:
+![alt text](/img/Goin2CaliDq.pdf "Kashmir")
 
 
 For this corpus, the default learning rate in the deepBach source code was too high, lower to .0009 from .001 acheived better results.
