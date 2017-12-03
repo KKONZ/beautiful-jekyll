@@ -55,7 +55,7 @@ Next I added Kashmir led zeppelin track and reharmonized the model to that track
 
 Going to California:
 
-![alt text](/img/GoingToCali.PNG "Going to California")
+<iframe width="100%" height="394" src="https://musescore.com/user/27137243/scores/4839372/embed" frameborder="0" allowfullscreen></iframe><span><a href="https://musescore.com/user/27137243/scores/4839372">Deep Going To California</a> by <a href="https://musescore.com/user/27137243">Konzert</a></span>
 
 
 
