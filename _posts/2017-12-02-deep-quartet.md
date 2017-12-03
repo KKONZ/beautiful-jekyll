@@ -18,8 +18,7 @@ Inline:
 ![alt text](/img/DeepBachImg1.jpg "Deep Bach")
 )
 
-[![IMAGE ALT TEXT HERE](/img/DeepBachImg1.jpg "Deep Bach")]
-(https://www.youtube.com/watch?v=VSEcQ7QqW4c)
+[![IMAGE ALT TEXT HERE](/img/DeepBachImg1.jpg "Deep Bach")](https://www.youtube.com/watch?v=VSEcQ7QqW4c)
 
 The base version of this code is available here:...
 
