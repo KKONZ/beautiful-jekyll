@@ -10,7 +10,7 @@ title: Deep Quartet
 ![alt text](/img/DeepBachImg1.jpg "Deep Bach")
 
 
-For this post I will explore the limits of the [deepBach](http://www.flow-machines.com/deepbach-polyphonic-music-generation-bach-chorales/) modeling approach to generate music with deep neural networks. The benchmarking used for the majority of bach AI models speaks for itself with this approach. For the first time as far as I know, in the bass/lowest voice, experts we're dupped more than not into believing that the model output was actually composed by Bach! 
+For this post I will explore the limits of the [deepBach](https://arxiv.org/abs/1612.01010) modeling approach to generate music with deep neural networks. The benchmarking used for the majority of bach AI models speaks for itself with this approach. For the first time as far as I know, in the bass/lowest voice, experts we're dupped more than not into believing that the model output was actually composed by Bach! 
 ...look up....
 
 
