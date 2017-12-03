@@ -20,37 +20,84 @@ One of the constraints of this modeling techinque is that there has to be the sa
 
 To gather the additional string quartet midi files, I wrote a script to scrape the files I wanted from site [Kunst Der Fuge](http://kunstderfuge.com/) with [Selenium](http://selenium-python.readthedocs.io/) using the Python wrapper to authenticate into the site and download the files of interest.
 
-The original source code from deepBach is available [here] and the corpus for that research is readily availble in the music21 package.
+The original source code from deepBach is available [here](https://github.com/Ghadjeres/DeepBach) and the corpus for that research is readily availble in the music21 package.
 
 In addition to the string quartets I also downloaded a Kashmir and Going to California from Led Zeppelin to use for reharmonizing.
+I conducted a bit of inferential statistics to analyze the distribution of the new tracks in my SpringBoard git repo [here](https://github.com/KKONZ/SpringBoard/tree/master/Capstone%201) and the code I used to train the models below is available [KKONZ DeepBach](https://github.com/KKONZ/DeepBach). My version has the custom dataset pickle file location hardcoded as I couldn't get the Sony version to work for that and I also adjusted the Adam optimizer to slow the learning rate from the default of .001 to .0009, to do this I had to change the source code in the deepBach.py file to do so.
 
 I had issues running the source code on my windows machine and ended up having to just hard code the pickled data set path and name instead of using the os python package. If you are using a windows or a linux machine the code below should work for you.
 An easy way of running this code is to launch an Azure Deep Learning VM, clone the repo, and start training away! I have had issues running the code and chose to hard code the pickle path for custom datasets in my version of the repo.
 
-# Modeling 
+# Training the model
 
-This approach utilizes Stacked LSTM models and psuedo-gibbs sampling. To learn more, see the research paper from CSL here:
-
-This project utilizes tensorflow and Keras. It embedds the data into a one hot array for the music in a sparse representation. It uses an Adam Optimizer and ... erorr testing (db check cross entropy??)
-For this corpus, the default learning rate in the deepBach source code was too high, lower to .0009 from .001 acheived better results.
-
-
+Regardless of the platform you choose to use if interested in running this code, you can clone the project while it is on my github page. Note that this version does not use Keras 2 yet.
 
 ```
 git clone "http://github.com/kkonz/DeepBach"
 ```
 
-After navigating to the new created deepBach directory, which created the first model for my first example below the code
+After cloning the github repository you will also need to download a couple libraries
+
+[music21](http://web.mit.edu/music21/):
 
 ```
-python3 deepBach.py --dataset datasets/custom_dataset --ext ReharmonizeBachxxxx -u 200 200 -d 200 -t 10 -p -i 40000 -r 45 -o 'ReharmBWVxxx.mid'
+pip install music21
+```
+[tqdm](https://pypi.python.org/pypi/tqdm):
+
+```
+pip install tqdm
 ```
 
-Which produces the output below:
+Then using the following parameters, you can adjust the following out of the box. To adjust optimizer settings you will need to do so in the deepBach.py file.
 
-...youtube
+```
+usage: deepBach.py [-h] [--timesteps TIMESTEPS] [-b BATCH_SIZE_TRAIN]
+                   [-s SAMPLES_PER_EPOCH] [--num_val_samples NUM_VAL_SAMPLES]
+                   [-u NUM_UNITS_LSTM [NUM_UNITS_LSTM ...]] [-d NUM_DENSE]
+                   [-n {deepbach,skip}] [-i NUM_ITERATIONS] [-t [TRAIN]]
+                   [-p [PARALLEL]] [--overwrite] [-m [MIDI_FILE]] [-l LENGTH]
+                   [--ext EXT] [-o [OUTPUT_FILE]] [--dataset [DATASET]]
+                   [-r [REHARMONIZATION]]
 
-Next I added Kashmir led zeppelin track and reharmonized the model to that track and going to california as well, both were trained in the same manner as the code above, but were delibrately named in a way to be indexed in the first position. Here are sample outputs from those models:
+optional arguments:
+  -h, --help            show this help message and exit
+  --timesteps TIMESTEPS
+                        model's range (default: 16)
+  -b BATCH_SIZE_TRAIN, --batch_size_train BATCH_SIZE_TRAIN
+                        batch size used during training phase (default: 128)
+  -s SAMPLES_PER_EPOCH, --samples_per_epoch SAMPLES_PER_EPOCH
+                        number of samples per epoch (default: 89600)
+  --num_val_samples NUM_VAL_SAMPLES
+                        number of validation samples (default: 1280)
+  -u NUM_UNITS_LSTM [NUM_UNITS_LSTM ...], --num_units_lstm NUM_UNITS_LSTM [NUM_UNITS_LSTM ...]
+                        number of lstm units (default: [200, 200])
+  -d NUM_DENSE, --num_dense NUM_DENSE
+                        size of non recurrent hidden layers (default: 200)
+  -n {deepbach,skip}, --name {deepbach,skip}
+                        model name (default: deepbach)
+  -i NUM_ITERATIONS, --num_iterations NUM_ITERATIONS
+                        number of gibbs iterations (default: 20000)
+  -t [TRAIN], --train [TRAIN]
+                        train models for N epochs (default: 15)
+  -p [PARALLEL], --parallel [PARALLEL]
+                        number of parallel updates (default: 16)
+  --overwrite           overwrite previously computed models
+  -m [MIDI_FILE], --midi_file [MIDI_FILE]
+                        relative path to midi file
+  -l LENGTH, --length LENGTH
+                        length of unconstrained generation
+  --ext EXT             extension of model name
+  -o [OUTPUT_FILE], --output_file [OUTPUT_FILE]
+                        path to output file
+  --dataset [DATASET]   path to dataset folder
+  -r [REHARMONIZATION], --reharmonization [REHARMONIZATION]
+                        reharmonization of a melody from the corpus identified
+                        by its id
+```
+
+
+I then added a midi file of the Led Zeppelin track Kashmir and reharmonized the model to that track and going to california as well, both were trained in the same manner as the code above, but were delibrately named in a way to be indexed in the first position. Here are sample outputs from those models:
 
 Kashmir:
 
