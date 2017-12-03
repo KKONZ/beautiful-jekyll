@@ -35,15 +35,13 @@ This project utilizes tensorflow and Keras. It embedds the data into a one hot a
 
 
 ```
-git clone 'http://github.com/kkonz/DeepBach
+git clone "http://github.com/kkonz/DeepBach"
 ```
 
 After navigating to the new created deepBach directory, which created the first model for my first example below the code
 
 ```
-python3 deepBach.py --dataset datasets/custom_dataset --ext ReharmonizeBachxxxx 
--u 200 200 -d 200 -t 10 -p -i 40000 -r 45 
--o 'ReharmBWVxxx.mid'
+python3 deepBach.py --dataset datasets/custom_dataset --ext ReharmonizeBachxxxx -u 200 200 -d 200 -t 10 -p -i 40000 -r 45 -o 'ReharmBWVxxx.mid'
 ```
 
 Which produces the output below:
