@@ -65,7 +65,7 @@ Kashmir:
 ![alt text](/img/Kashmir.png "Kashmir")
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/6t_Dh12lRh4?ecver=1" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6t_Dh12lRh4?ecver=1" frameborder="0"></iframe>
 
 
 
