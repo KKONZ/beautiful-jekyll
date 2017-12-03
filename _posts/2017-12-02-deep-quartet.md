@@ -14,13 +14,11 @@ This post will expand on the research done for the DeepBach project from Sony CS
 
 The base version of this code is available here:...
 
-For an overview of their DeepBach project with sample output, see the url HERE 
-
-[I'm an inline-style link](http://www.flow-machines.com/deepbach-polyphonic-music-generation-bach-chorales/).
+To learn more and to listen to sample output from the original project click the link [HERE](http://www.flow-machines.com/deepbach-polyphonic-music-generation-bach-chorales/).
 
 
 To scrape the additional files for the training corpus follow my github repo here:...
-http://kunstderfuge.com/
+To gather the data I wanted for this project I registered a paid account to [Kunst Der Fuge](http://kunstderfuge.com/) and used [Selenium](http://selenium-python.readthedocs.io/) to authenticate into the site and grab the files for this project programmatically. The code for how I gathered the dataset is available HERE TODO!!! Update the Selenium script. In addition to the string quartets I also downloaded a Kashmir and Going to California from Led Zeppelin to use for reharmonizing.
 
 An easy way of running this code is to launch an Azure Deep Learning VM, clone the repo, and start training away! I have had issues running the code and chose to hard code the pickle path for custom datasets in my version of the repo.
 
