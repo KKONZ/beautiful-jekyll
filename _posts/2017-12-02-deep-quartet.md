@@ -54,7 +54,7 @@ Kashmir:
 ![alt text](/img/Kashmir-1.png "Kashmir")
 
 Going to California:
-![alt text](/img/Goin2Cali-1.png "Kashmir")
+![alt text](/img/GoinToCali-1.png "Kashmir")
 
 
 For this corpus, the default learning rate in the deepBach source code was too high, lower to .0009 from .001 acheived better results.
