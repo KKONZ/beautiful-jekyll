@@ -16,9 +16,10 @@ This post will expand on the research done for the DeepBach project from Sony CS
 
 Inline:
 ![alt text](/img/DeepBachImg1.jpg "Deep Bach")
+)
 
-
-[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=https://www.youtube.com/watch?v=hMQfnASbaLo)
+[![IMAGE ALT TEXT HERE](/img/DeepBachImg1.jpg "Deep Bach")]
+(https://soundcloud.com/postmalone/rockstar-feat-21-savage)
 
 The base version of this code is available here:...
 
