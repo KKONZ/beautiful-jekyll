@@ -14,7 +14,7 @@ title: Deep Quartet
 
 This post will expand on the research done for the DeepBach project from Sony CSL and broaden the corpus to not only Bach Chorales but also include string quartets scrapped from the web site KunstDerFuge with Selenium using the Python wrapper.
 
-![alt text](https://github.com/KKONZ/kkonz.github.io/blob/master/img/DeepBachImg1.jpg "Deep Bach)
+![alt text](https://github.com/KKONZ/kkonz.github.io/blob/master/img/DeepBachImg1.jpg "Deep Bach")
 
 
 The base version of this code is available here:...
