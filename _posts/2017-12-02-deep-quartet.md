@@ -62,11 +62,5 @@ Going to California:
 
 Kashmir:
 
-![alt text](/img/Kashmir.png "Kashmir")
-
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/6t_Dh12lRh4?ecver=1" frameborder="0"></iframe>
-
-
 <iframe width="100%" height="394" src="https://musescore.com/user/27137243/scores/4839364/embed" frameborder="0" allowfullscreen></iframe><span><a href="https://musescore.com/user/27137243/scores/4839364">Deep Kashmir</a> by <a href="https://musescore.com/user/27137243">Konzert</a></span>
 
