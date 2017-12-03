@@ -5,12 +5,19 @@ title: Deep Quartet
 ---
 # Music Generation with Deep Neural Networks
 
-## Inspiration 
+## By Karl Konz
+
+The first time I heard the sample output of the deepBach project from Sony CSL I distinctingly remember getting goosebumps and a bit overwhelmed by how compeling the music that had been produced was to me. Of course if you go to their youtube post you will see a variety of responses along the lines of 'the "author" didn't take blah blah blah into account', everyone is an expert. ;) But the benchmarking used for the majority of bach AI models speaks for itself. For the first time, in the bass/lowest voice, experts could we're dupped more than not into believing that the model output was actually bach! 
+...look up....
+
+ Having perfor There is something incredibly special about how music compliments himstory. One of my favorite Beethoven symphonies, #3, in its inception praised Neapoleon as Ludwig believed he embodied the democratic and anti-monarchical ideals of the French Revolution, but desavowed himself from Neapoleon by the time of its completion. Or the tight rope that Shostakovich walked having received immediate celebrity status for his first symphony, which he composed while at uni
 
 
+Having competed for principal and section percussion auditions, bach was frequently an item on the audition list.
 
+Inspiration
 
-
+I have always
 
 This post will expand on the research done for the DeepBach project from Sony CSL and broaden the corpus to not only Bach Chorales but also include string quartets scrapped from the web site KunstDerFuge with Selenium using the Python wrapper.
 
@@ -18,7 +25,7 @@ Inline:
 ![alt text](/img/DeepBachImg1.jpg "Deep Bach")
 )
 
-![IMAGE ALT TEXT HERE](/img/DeepBachImg1.jpg "Deep Bach")https://www.youtube.com/watch?v=VSEcQ7QqW4c
+
 
 The base version of this code is available here:...
 
@@ -39,6 +46,11 @@ Starting with Bach to train music makes a lot of sense to me. Prior to working i
 This approach utilizes Stacked LSTM models and psuedo-gibbs sampling. To learn more, see the research paper from CSL here:
 
 This project utilizes tensorflow and Keras. It embedds the data into a one hot array for the music in a sparse representation. It uses an Adam Optimizer and ... erorr testing (db check cross entropy??)
+
+
+``` python
+
+```
 
 The core project use the default optimization settings. The learning rate looked to high for me so I lowered it from .001 to .0009. The training results were hitting about 100% with the defaults and about 92% after lowering the learning rate. The testing results were about 84%.
 
