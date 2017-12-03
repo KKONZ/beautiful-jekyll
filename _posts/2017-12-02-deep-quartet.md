@@ -32,6 +32,8 @@ An easy way of running this code is to launch an Azure Deep Learning VM, clone t
 This approach utilizes Stacked LSTM models and psuedo-gibbs sampling. To learn more, see the research paper from CSL here:
 
 This project utilizes tensorflow and Keras. It embedds the data into a one hot array for the music in a sparse representation. It uses an Adam Optimizer and ... erorr testing (db check cross entropy??)
+For this corpus, the default learning rate in the deepBach source code was too high, lower to .0009 from .001 acheived better results.
+
 
 
 ```
@@ -51,11 +53,10 @@ Which produces the output below:
 Next I added Kashmir led zeppelin track and reharmonized the model to that track and going to california as well, both were trained in the same manner as the code above, but were delibrately named in a way to be indexed in the first position. Here are sample outputs from those models:
 Kashmir:
 ![alt text](/img/Kashmir-1.png "Kashmir")
+
 Going to California:
 ![alt text](/img/GoingToCali-1.png "Going to California")
 
-
-For this corpus, the default learning rate in the deepBach source code was too high, lower to .0009 from .001 acheived better results.
 
 
 
