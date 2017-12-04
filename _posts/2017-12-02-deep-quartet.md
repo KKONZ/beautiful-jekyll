@@ -26,7 +26,7 @@ I conducted a significance test as a quick check of the the distributions of not
 
 
 
-![alt text](/img/bNotes.png "Note Compare")
+![alt text](/img/bNotes.png "Note Compare")<!-- .element height="50%" width="50%" -->
 
 
 ![alt text](/img/sNotes.png "Note Compare")
