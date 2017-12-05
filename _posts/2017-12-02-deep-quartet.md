@@ -29,6 +29,9 @@ I conducted a significance test as a quick check of the the distributions of not
 
 ![alt text](/img/Strings_____Notes.png "Note Compare")
 
+<iframe src="/img/StringsNotes.svg" width="500" height="500" sandbox>
+    <img src="/img/StringsNotes.svg" alt="StringNotes" />
+</iframe>
 
 All of which is included in this repository [Project Build](https://github.com/KKONZ/SpringBoard/tree/master/Capstone%201) which includes the code used to download the files and the code used to conduct the inferential tests. 
 
