@@ -22,7 +22,7 @@ To gather the additional string quartet midi files, I wrote a script to scrape t
 
 The original source code from deepBach is available [SONY deepBach](https://github.com/Ghadjeres/DeepBach) and the corpus for that research is readily availble in the music21 package.
 
-I conducted a significance test as a quick check of the the distributions of note/duation combination of the Bach files and the new String Quartet files I download. There was evidence of a statistical difference between the 2 groups. It was also interesting to see that with the additional string quartets there was a 730% increase in the the counts of notes than what was used in deepBach.
+I conducted a significance test as a quick check of the the distributions of note/duation combination of the Bach files and the new String Quartet files I download. There was evidence of a statistical difference between the 2 groups. It was also interesting to see that with the additional string quartets there was a 830% increase in the the count of notes from what was used in the original deepBach study.
 
 
 ![alt text](/img/Bach____Notes.png "Note Compare")
