@@ -28,12 +28,13 @@ All of which is included in this repository [Project Build](https://github.com/K
 
 # Training the model
 
-The code I used to actually train the AI music embedded below is available [KKONZ deepBach](https://github.com/KKONZ/DeepBach). My version has the custom dataset pickle file location hardcoded as I couldn't get the Sony version to work for that and I also adjusted the Adam optimizer to slow the learning rate from the default of .001 to .0009, to do this I had to change the source code in the deepBach.py file. The model utilizes stacked lstm models as illustrated in the image below:
+The model utilizes stacked lstm models as illustrated in the image below:
 
 
 ![alt text](/img/LSTMref.JPG "Model reference")
 
-I had issues running the source code on my windows machine and ended up having to just hard code the pickled data set path and name instead of using the os python package. If you are using a windows or a linux machine the code below should work for you.
+
+I also adjusted the Adam optimizer to slow the learning rate from the default of .001 to .0009, to do this I had to change the source code in the deepBach.py file.I had issues running the source code on my windows machine and ended up having to just hard code the pickled data set path and name instead of using the os python package. The code I used to actually train the AI music embedded below is available [KKONZ deepBach](https://github.com/KKONZ/DeepBach). My version has the custom dataset pickle file location hardcoded as I couldn't get the Sony version to work for that.  If you are using a windows or a linux machine the code below should work for you.
 An easy way of running this code is to launch an Azure Deep Learning VM, clone the repo, and start training away! I have had issues running the code and chose to hard code the pickle path for custom datasets in my version of the repo.
 Regardless of the platform you choose to use if interested in running this code, you can clone the project while it is on my github page. Note that this version does not use Keras 2 yet.
 
