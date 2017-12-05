@@ -10,19 +10,12 @@ title: Deep Quartet
 ![alt text](/img/DeepBachImg1.jpg "Deep Bach")
 
 
-For this post I will explore the limits of the [deepBach](https://arxiv.org/abs/1612.01010) modeling approach to generate music with deep neural networks. The benchmarking used for the majority of bach AI models speaks for itself with this approach. For the first time as far as I know, in the bass/lowest voice, experts we're dupped more than not into believing that the model output was actually composed by Bach! 
-...look up....
+For this post I will explore the limits of the [deepBach](https://arxiv.org/abs/1612.01010) modeling approach to generate music with deep neural networks. The code is open sourced and can be found under [SONY deepBach](https://github.com/Ghadjeres/DeepBach), the Bach chorale corpus for that research is readily availble in the music21 package. I wanted to explore expanding the corpus to include compositions from after the baroque peroid as well. One of the constraints of this modeling techinque is that there has to be the same number of voices for each training composition. The Bach files used for the initial research have four voices.
 
 
 ## Additional data, string quartets
 
-One of the constraints of this modeling techinque is that there has to be the same number of voices for each training composition. The Bach files used for the initial research have four voices. In addition to these files I am added 189 string quartet midi files from Beethoven, Mozart, Shostakovich, Brahms, Schumann, and Schubert, resulting in an increased training corpus of roughly +50% from what was used in the research paper. 
-
-To gather the additional string quartet midi files, I wrote a script to scrape the files I wanted from site [Kunst Der Fuge](http://kunstderfuge.com/) with [Selenium](http://selenium-python.readthedocs.io/) using the Python wrapper to authenticate into the site and download the files of interest.
-
-The original source code from deepBach is available [SONY deepBach](https://github.com/Ghadjeres/DeepBach) and the corpus for that research is readily availble in the music21 package.
-
-I conducted a significance test as a quick check of the the distributions of note/duation combination of the Bach files and the new String Quartet files I download. There was evidence of a statistical difference between the 2 groups. It was also interesting to see that with the additional string quartets there was a 830% increase in the the count of notes from what was used in the original deepBach study.
+In addition to the roughly 350 Bach chorale files from the original research, I am added 189 string quartet midi files from Beethoven, Mozart, Shostakovich, Brahms, Schumann, and Schubert. To gather the additional string quartet midi files, I wrote a script to scrape the files I wanted from site [Kunst Der Fuge](http://kunstderfuge.com/) with [Selenium](http://selenium-python.readthedocs.io/) using the Python wrapper to authenticate into the site and download the files of interest. By adding the string quartet files there was a 830% increase in the the count of notes from what was used in the original deepBach study. While there were less files of string quartets, they were generally much longer compositions and thus contained more notes. This is a bit like have pictures of different resolution. I experimented with subsetting the string quartets into smaller files, but that approach did not yeild very complelling or statistically accurate results.
 
 
 <img src="/img/Bach__Notes.svg" alt="StringNotes" />
