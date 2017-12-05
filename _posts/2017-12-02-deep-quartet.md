@@ -10,7 +10,7 @@ title: Deep Quartet
 ![alt text](/img/DeepBachImg1.jpg "Deep Bach")
 
 
-For this post I will explore the limits of the [deepBach](https://arxiv.org/abs/1612.01010) modeling approach to generate music with deep neural networks. The code is open sourced and can be found under [SONY deepBach](https://github.com/Ghadjeres/DeepBach), the Bach chorale corpus for that research is readily availble in the music21 package. I wanted to explore expanding the corpus to include compositions from after the baroque peroid as well. One of the constraints of this modeling techinque is that there has to be the same number of voices for each training composition. The Bach files used for the initial research have four voices.
+For this post I will explore the limits of the [deepBach](https://arxiv.org/abs/1612.01010) modeling approach to generate music with deep neural networks. The code is open sourced and can be found under [SONY deepBach](https://github.com/Ghadjeres/DeepBach), the Bach chorale corpus for that research is readily availble in the music21 package. I wanted to explore expanding the corpus to include compositions from after the baroque peroid as well. One of the constraints of this modeling techinque is that there has to be the same number of voices for each training composition. The Bach files used for the initial research have four voices so I decided to add string quartets from the classical, romantic, and nationalist periods as they have the same number of voices.
 
 
 ## Additional data, string quartets
