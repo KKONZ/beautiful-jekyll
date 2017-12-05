@@ -26,10 +26,10 @@ I conducted a significance test as a quick check of the the distributions of not
 
 
 
-![alt text](/img/bNotes.png "Note Compare")<!-- .element height="50%" width="50%" -->
+![alt text](/img/b_Notes.png "Note Compare")<!-- .element height="50%" width="50%" -->
 
 
-![alt text](/img/sNotes.png "Note Compare")
+![alt text](/img/s_Notes.png "Note Compare")
 
 
 All of which is included in this repository [Project Build](https://github.com/KKONZ/SpringBoard/tree/master/Capstone%201) which includes the code used to download the files and the code used to conduct the inferential tests. 
