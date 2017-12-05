@@ -24,9 +24,12 @@ The original source code from deepBach is available [SONY deepBach](https://gith
 
 I conducted a significance test as a quick check of the the distributions of note/duation combination of the Bach files and the new String Quartet files I download. There was evidence of a statistical difference between the 2 groups. It was also interesting to see that with the additional string quartets there was a 830% increase in the the count of notes from what was used in the original deepBach study.
 
+
 <img src="/img/Bach__Notes.svg" alt="StringNotes" />
 
+
 <img src="/img/Strings__Notes.svg" alt="StringNotes" />
+
 
 All of which is included in this repository [Project Build](https://github.com/KKONZ/SpringBoard/tree/master/Capstone%201) which includes the code used to download the files and the code used to conduct the inferential tests. 
 
