@@ -16,7 +16,7 @@ In the post I will go over how to prepare the yelp data set, currently on it's 1
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>my plot</title>
+        <title>Topic Modeling</title>
         
 <link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.10.min.css" type="text/css" />
         
