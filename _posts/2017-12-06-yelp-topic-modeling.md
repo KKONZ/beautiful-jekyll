@@ -11,8 +11,6 @@ In the post I will go over how to prepare the yelp data set, currently on it's 1
 
 
 
-
-<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
