@@ -15,7 +15,7 @@ For this post I will explore the limits of the [deepBach](https://arxiv.org/abs/
 
 ## Additional data, string quartets
 
-In addition to the roughly 350 Bach chorale files from the original research, I am added 189 string quartet midi files from Beethoven, Mozart, Shostakovich, Brahms, Schumann, Schubert, and others. To gather the additional string quartet midi files, I wrote a script to scrape the files I wanted from site [Kunst Der Fuge](http://kunstderfuge.com/) with [Selenium](http://selenium-python.readthedocs.io/) using the Python wrapper. By adding the string quartet files there was a 830% increase in the the count of notes from what was used in the original deepBach study. So there was just over half the number of string quartet files as Bach files, however the string quartet files contain much more notes. I experimented with subsetting the string quartets into smaller files to sort of standardize the size of the files, but that approach did not yeild very complelling or statistically accurate results.
+In addition to the roughly 350 Bach chorale files from the original research, I am added 189 string quartet midi files from Beethoven, Mozart, Shostakovich, Brahms, Schumann, Schubert, and others. To gather the additional string quartet midi files, I wrote a script to scrape the files I wanted from site [Kunst Der Fuge](http://kunstderfuge.com/) with [Selenium](http://selenium-python.readthedocs.io/) using the Python wrapper. By adding the string quartet files there was a 830% increase in the the count of notes from what was used in the original deepBach study. So there was just over half the number of string quartet files as Bach files, however the string quartet files contain much more notes. I experimented with subsetting the string quartets into smaller files to sort of standardize the size of the files, but that approach did not yeild very complelling or statistically accurate results. I also conducted a z test to check the proportion of the notes in terms of frequency and note duration combinations as plotted below, the p value from the test was 7x10-43, thus there is evidence of a difference in the proportion of notes between the Bach chorales and the new string quartets I added. We can see that notes with smaller durations are more common in the string quartet files than in the Bach Chorale files. In other words, it is more common to have faster notes in the string quartets than in the Bach compositions.
 
 
 <img src="/img/Bach__Notes.svg" alt="StringNotes" />
@@ -34,12 +34,11 @@ The model utilizes stacked lstm models as illustrated in the image below:
 ![alt text](/img/LSTMref.JPG "Model reference")
 
 
-I also adjusted the Adam optimizer to slow the learning rate from the default of .001 to .0009, to do this I had to change the source code in the deepBach.py file.I had issues running the source code on my windows machine and ended up having to just hard code the pickled data set path and name instead of using the os python package. The code I used to actually train the AI music embedded below is available [KKONZ deepBach](https://github.com/KKONZ/DeepBach). My version has the custom dataset pickle file location hardcoded as I couldn't get the Sony version to work for that.  If you are using a windows or a linux machine the code below should work for you.
+I had issues running the source code on my windows machine and ended up having to just hard code the pickled data set path and name instead of using the os python package. The code I used to actually train the AI music embedded below is available [KKONZ deepBach](https://github.com/KKONZ/DeepBach). My version has the custom dataset pickle file location hardcoded as I couldn't get the Sony version to work for that.  If you are using a windows or a linux machine the code below should work for you.
 An easy way of running this code is to launch an Azure Deep Learning VM, clone the repo, and start training away! I have had issues running the code and chose to hard code the pickle path for custom datasets in my version of the repo.
 Regardless of the platform you choose to use if interested in running this code, you can clone the project while it is on my github page. Note that this version does not use Keras 2 yet.
 
 After cloning the github repository you will also need to download a couple libraries
-
 [music21](http://web.mit.edu/music21/) and [tqdm](https://pypi.python.org/pypi/tqdm):
 
 ```python
@@ -109,7 +108,5 @@ Going to California:
 <iframe width="100%" height="394" src="https://musescore.com/user/27137243/scores/4839372/embed" frameborder="0" allowfullscreen></iframe><span><a href="https://musescore.com/user/27137243/scores/4839372">Deep Going To California</a> by <a href="https://musescore.com/user/27137243">Konzert</a></span>
 
 
-
-
-
-
+## Conclusions:
+When experimenting with training the model and choosing a file to reharmonize, it seemed that  files where all of the voices are moving train more compelling output than when the voices more or less just outline the harmonic changes in block chords.
