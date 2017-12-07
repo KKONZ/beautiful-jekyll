@@ -109,4 +109,4 @@ Going to California:
 
 
 ## Conclusions:
-When experimenting with training the model and choosing a file to reharmonize, it seemed that  files where all of the voices are moving train more compelling output than when the voices more or less just outline the harmonic changes in block chords.
+When choosing a file to reharmonize, it seemed that  files where all of the voices are moving train more compelling output than when the voices more or less just outline the harmonic changes in block chords. Overall I was happy with the output from this modeling technique and this has been an incredibly rewarding project to work on.
