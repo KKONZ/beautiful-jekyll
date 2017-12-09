@@ -14,14 +14,19 @@ https://www.yelp.com/dataset/challenge
 ### 2. read and clean the data
 
 A. Subset data on read
+
 B. lemmatization
+
 C. tokenizing
+
 D. tri-gram 
 
 ### 3. modeling 
 
 A. word 2 vec
+
 B. t-sne
+
 C. Spectral clustering with nearest neighbor affinity and kmeans labels.
 
 
