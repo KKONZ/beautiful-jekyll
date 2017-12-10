@@ -25,6 +25,7 @@ B. t-sne, Spectral clustering with nearest neighbor affinity and kmeans labels.
 
 The code below trains a Spectral Clustering to cluster groups of the tsne representation of the word vector. 
 
+
 ```python
 from sklearn.cluster import SpectralClustering
 sc = SpectralClustering(affinity = 'nearest_neighbors', assign_labels = 'kmeans'
