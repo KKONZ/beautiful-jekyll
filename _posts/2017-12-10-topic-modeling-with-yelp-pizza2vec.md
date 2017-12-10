@@ -34,6 +34,10 @@ sc = SpectralClustering(affinity = 'nearest_neighbors', assign_labels = 'kmeans'
 
 ```
 
+
+Some Markdown text with <span style="color:blue">The __*blue*__ cluster represents foreign language topics. </span>.
+
+
 <html lang="en">
     <head>
         <meta charset="utf-8">
