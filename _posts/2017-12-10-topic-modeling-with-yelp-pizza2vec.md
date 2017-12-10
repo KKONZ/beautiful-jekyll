@@ -37,21 +37,21 @@ sc = SpectralClustering(affinity = 'nearest_neighbors', assign_labels = 'kmeans'
 
 The words represented in the follow topic clusters:
 
-* <span style="color:yellow">*Yellow*</span> clustered words are related to price.
+<span style="color:yellow">*</span> Yellow clustered words are related to price.
 
-* <span style="color:navy">*Navy*</span> clustered words are related to service.
+<span style="color:navy">*</span> Navy clustered words are related to service.
 
-* <span style="color:pink">*Pink*</span> clustered words are related to hours and events.
+<span style="color:pink">*</span> Pink clustered words are related to hours and events.
 
-* <span style="color:pink">*Orange*</span> clustered words are related to location.
+<span style="color:orange">*</span> Orange clustered words are related to location.
 
-* <span style="color:pink">Bblue*</span> clustered words are related to Foriegn languages.
+* <span style="color:blue">*</span> Blue clustered words are related to Foriegn languages.
 
-* <span style="color:pink">*Red*</span> clustered words are related to upscale entrees.
+* <span style="color:red">*</span> Red clustered words are related to upscale entrees.
 
-* <span style="color:black">*Black*</span> clustered words are related to upscale entrees.
+* <span style="color:black">*</span> Black clustered words are related to upscale entrees.
 
-* <span style="color:black">*Green*</span> clustered words are everything else.
+* <span style="color:green">*</span> Green clustered words are everything else.
 
 <html lang="en">
     <head>
