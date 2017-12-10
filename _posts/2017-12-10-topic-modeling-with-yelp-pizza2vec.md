@@ -6,17 +6,19 @@ title: 'Topic Modeling with Yelp, Pizza2vec'
 ## Topic Modeling in Yelp
 One of my favorite things in this wonderful pale blue dot is pizza. Arguably my first real love, pizza has taught me some of the most important things to learn in life. Beyond having incredibly easy dinner suggestions (good pizza will ALWAYS make that list), I was fortunate enough to gain some foundational business experience having managed a local pizza shop in cozy St. Cloud MN as a teen. I have only been to New York City once in my life. I was only there for a weekend and of course pizza had to be a crucial part of the trip. Knowing where to go was really easy thanks to my graduate school percussion teacher at the time who tipped me off to such greats as Lombardos, World of Pizza, and Angelos. In addition to spending time with friends, the awesome food suggestions made the trip that much more memorable and fun. I love checking out local pizza spots when I travel, but the problem is that I am usually really rushed when I am traveling so I don’t have time to scoure through yelp reviews individualy to find reviews that are relevant to what I want at a given time. For this post I am going to subset the YELP 10th ACADEMIC DATASET to reviews related to pizza and explore the topic modeling space.
 
-1. get the data
-[Yelp Dataset](https://www.yelp.com/dataset/challenge "10th Iteration Data")
 
-2. read and clean the data
-A. Subset data on read
+### read and clean the data
 
-B. lemmatization
+The data that was used for the post can be downloaded from the following URL [Yelp Dataset](https://www.yelp.com/dataset/challenge "10th Iteration Data").
 
-C. tokenizing
+The data is available in both SQL and JSON, I chose to download the JSON version and read the data into python with JSON package I used codecs to iterate through the json files and write to txt files. Instead of topic modeling on the entire roughly 3 million review restaurants, I chose instead to subset to reviews that contained the word pizza. 
 
-D. tri-gram
+Next it is necessary to prepare the text data for meaningful results for our model.
+
+### Preparing the text for modeling
+
+Text data can be very highly dimensional. If proper steps are not taken to clean the text data then one should not expect to have a very accurate or useful. After I subset the reviews I tokenized the spaces and punctions. After that I lemmatized the data, this is the process of text normaliztion to normalize casing of letters and contractions. In addition I created uni, bi, and trigram sentences. All of the natural language processing has thus far been achieved using the python package Spacy. You can build you own stopword vocabulary in Spacy but I chose to use NLTK instead which has a built in stop word repository.
+
 
 3. modeling
 A. word 2 vec
