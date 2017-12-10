@@ -34,16 +34,25 @@ sc = SpectralClustering(affinity = 'nearest_neighbors', assign_labels = 'kmeans'
 
 ```
 
+Prior to settling on a Spectral Clustering model, I had tested DBSCAN and 2 of the best silhouette scored Kmeans for 3 and 7 kernals. The DBSCAN model created 125 different clusters but the vast majority of the observations fell into one kernal. Both the KMeans models did an OK job of clustering the words, but both split what was clearly a cluster based on price down the middle. The spectral clustering approach appeared to have done an excellent job of finding related words based on the words tsne coordinates.
 
 The words represented in the follow topic clusters:
 
-<span style="color:yellow">*</span> Yellow clustered words are related to price.
+p {
+  text-decoration: underline;
+  -webkit-text-decoration-color: red; /* safari still uses vendor prefix */
+  text-decoration-color: red;
+}
 
-<span style="color:navy">*</span> Navy clustered words are related to service.
+<p>black text with red underline in one element - no wrapper elements here!</p>
 
-<span style="color:pink">*</span> Pink clustered words are related to hours and events.
+* <span style="color:yellow">*Yellow</span> Yellow clustered words are related to price.
 
-<span style="color:orange">*</span> Orange clustered words are related to location.
+* <span style="color:navy">*</span> Navy clustered words are related to service.
+
+* <span style="color:pink">*</span> Pink clustered words are related to hours and events.
+
+* <span style="color:orange">*</span> Orange clustered words are related to location.
 
 * <span style="color:blue">*</span> Blue clustered words are related to Foriegn languages.
 
