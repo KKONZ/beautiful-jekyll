@@ -39,24 +39,7 @@ sc = SpectralClustering(affinity = 'nearest_neighbors', assign_labels = 'kmeans'
 
 Prior to settling on a Spectral Clustering model, I had tested DBSCAN and 2 of the best silhouette scored Kmeans for 3 and 7 kernals. The DBSCAN model created 125 different clusters but the vast majority of the observations fell into one kernal. Both the KMeans models did an OK job of clustering the words, but both split what was clearly a cluster based on price down the middle. The spectral clustering approach appeared to have done an excellent job of finding related words based on the words tsne coordinates.
 
-The words represented in the follow topic clusters:
 
-
-<span style="color:black">O</span> Black clustered words are related to upscale entrees.
-
-<span style="color:yellow">O</span> Yellow clustered words are related to price.
-
-<span style="color:navy">O</span> Navy clustered words are related to service.
-
-<span style="color:pink">O</span> Pink clustered words are related to hours and events.
-
-<span style="color:orange">O</span> Orange clustered words are related to location.
-
-<span style="color:blue">O</span> Blue clustered words are related to Foriegn languages.
-
-<span style="color:red">O</span> Red clustered words are related to upscale entrees.
-
-<span style="color:green">O</span> Green clustered words are everything else.
 
 <html lang="en">
     <head>
@@ -127,6 +110,24 @@ The words represented in the follow topic clusters:
     </body>
 </html>
 
+#### The words represented in the follow topic clusters:
+
+
+<span style="color:black">O</span> Black clustered words are related to upscale entrees.
+
+<span style="color:yellow">O</span> Yellow clustered words are related to price.
+
+<span style="color:navy">O</span> Navy clustered words are related to service.
+
+<span style="color:pink">O</span> Pink clustered words are related to hours and events.
+
+<span style="color:orange">O</span> Orange clustered words are related to location.
+
+<span style="color:blue">O</span> Blue clustered words are related to Foriegn languages.
+
+<span style="color:red">O</span> Red clustered words are related to upscale entrees.
+
+<span style="color:green">O</span> Green clustered words are everything else.
 
 ### Conclusion
 
