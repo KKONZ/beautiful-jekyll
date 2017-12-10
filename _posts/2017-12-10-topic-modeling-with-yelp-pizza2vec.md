@@ -128,23 +128,23 @@ p = figure(...
 #### The words represented in the follow topic clusters:
 
 
-<span style="color:black">O</span> Black clustered words are related to drinks, deserts, and texture.
+<span style="color:black">## O</span> Black clustered words are related to drinks, deserts, and texture.
 
-<span style="color:yellow">O</span> Yellow clustered words are related to price.
+<span style="color:yellow">## O</span> Yellow clustered words are related to price.
 
-<span style="color:navy">O</span> Navy clustered words are related to service.
+<span style="color:navy">## O</span> Navy clustered words are related to service.
 
-<span style="color:pink">O</span> Pink clustered words are related to hours and events.
+<span style="color:pink">## O</span> Pink clustered words are related to hours and events.
 
-<span style="color:orange">O</span> Orange clustered words are related to location.
+<span style="color:orange">## O</span> Orange clustered words are related to location.
 
-<span style="color:blue">O</span> Blue clustered words are related to Foriegn languages.
+<span style="color:blue">## O</span> Blue clustered words are related to Foriegn languages.
 
-<span style="color:red">O</span> Red clustered words are related to upscale entrees.
+<span style="color:red">## O</span> Red clustered words are related to upscale entrees.
 
-<span style="color:green">O</span> Green clustered words are everything else.
+<span style="color:green">## O</span> Green clustered words are everything else.
 
 ### Conclusion
 
 Great so I have an interactive plot that looks like a cheap knock off of a google logo, so what can I do with this? 
-This model could be used for a number of applications. If this were a project for a real company/problem, this approach could be used to pipe customers to various treatments based on their reviewing behavior. Say someone posts about upscale entrees, grouped in red in the plot above, then your engagement with those customers may be more focused on menu items, where ash customers who reviews are more oriented towards price you may want to send more coupons or something. Even though tuning this model took some time for me to optimize and to try out different algorithms, it is still amazing to me that the models themselves can find such robust patterns in the data. While this was trained on the academic data set, I am seriously considering creating a version of this model with their API. I absolutely love the idea of tailoring my Yelp search to topics that I am interested in at any given time. Say I am in Portland and want to get a local brew with my pie, I could apply that model to only search for beer related pizza review! Perhaps I am in chicago and want the most upscale pizza I can find, I could use that cluster to find reviews in Chicago that are relevant. 
+This model could be used for a number of applications. If this were a project for a real company/problem, this approach could be used to pipe customers to various treatments based on their reviewing behavior. Say someone posts about upscale entrees, grouped in red in the plot above, then your engagement with those customers may be more focused on menu items, where ash customers who reviews are more oriented towards price you may want to send more coupons or something. Even though tuning this model took some time for me to optimize and to try out different algorithms, it is still amazing to me that the models themselves can find such robust patterns in the data. While this was trained on the academic data set, I am seriously considering creating a version of this model with their API. I absolutely love the idea of tailoring my Yelp search to topics that I am interested in at any given time. Say I am in Portland and want to get a local brew with my pie, I could apply that model to only search for beer related pizza review! Perhaps I am in chicago and want the most upscale pizza I can find, I could use that cluster to find reviews in Chicago that are relevant.
