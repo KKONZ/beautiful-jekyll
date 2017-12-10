@@ -40,21 +40,21 @@ The words represented in the follow topic clusters:
 
 
 
-* <span style="color:yellow">YELLOW</span> clustered words are related to price.
+* <span style="color:yellow">O</span> Yellow clustered words are related to price.
 
-* <span style="color:navy">NAVY</span> clustered words are related to service.
+* <span style="color:navy">O</span> Navy clustered words are related to service.
 
-* <span style="color:pink">PINK</span> clustered words are related to hours and events.
+* <span style="color:pink">O</span> Pink clustered words are related to hours and events.
 
-* <span style="color:orange">ORANGE</span> clustered words are related to location.
+* <span style="color:orange">O</span> Orange clustered words are related to location.
 
-* <span style="color:blue">BLUE</span> clustered words are related to Foriegn languages.
+* <span style="color:blue">O</span> Blue clustered words are related to Foriegn languages.
 
-* <span style="color:red">RED</span> clustered words are related to upscale entrees.
+* <span style="color:red">O</span> Red clustered words are related to upscale entrees.
 
-* <span style="color:black">BLACK</span> clustered words are related to upscale entrees.
+* <span style="color:black">O</span> Black clustered words are related to upscale entrees.
 
-* <span style="color:green">GREEN</span> clustered words are everything else.
+* <span style="color:green">O</span> Green clustered words are everything else.
 
 <html lang="en">
     <head>
