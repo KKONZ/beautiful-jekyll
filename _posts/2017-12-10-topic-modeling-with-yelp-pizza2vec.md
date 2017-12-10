@@ -4,10 +4,13 @@ published: true
 title: 'Topic Modeling with Yelp, Pizza2vec'
 ---
 ## Topic Modeling in Yelp
-One of my favorite things in this wonderful pale blue dot is pizza. Arguably my first real love, pizza has taught me some of the most important things to learn in life. Beyond having incredibly easy dinner suggestions (good pizza will ALWAYS make that list), I was fortunate enough to gain some foundational business experience having managed a local pizza shop in cozy St. Cloud MN as a teen. I have only been to New York City once in my life. I was only there for a weekend and of course pizza had to be a crucial part of the trip. Knowing where to go was really easy thanks to my graduate school percussion teacher at the time who tipped me off to such greats as Lombardos, World of Pizza, and Angelos. In addition to spending time with friends, the awesome food suggestions made the trip that much more memorable and fun. I love checking out local pizza spots when I travel, but the problem is that I am usually really rushed when I am traveling so I don’t have time to scoure through yelp reviews individualy to find reviews that are relevant to what I want at a given time. For this post I am going to subset the YELP 10th ACADEMIC DATASET to reviews related to pizza and explore the topic modeling space.
+One of my favorite things in the world is a great pizza. Arguably my first real love, pizza has taught me some of the most important things to learn in life. Beyond having incredibly easy and consistent dinner suggestions (good pizza will ALWAYS make that list), I was fortunate enough to gain some foundational business experience having managed a local pizza shop in cozy St. Cloud MN as a teen. I have only been to New York City once in my life and was only there for a weekend, but of course pizza had to be a focal pointt of the trip. 
+
+Knowing where to go was really easy thanks to my graduate school percussion teacher at the time who tipped me off to such greats as Lombardos, World of Pizza, and Angelos. In addition to spending time with friends, the awesome food suggestions made the trip that much more memorable and fun. I love checking out local pizza spots when I travel, but the problem is that I am usually really rushed when I am traveling so I don’t have time to scourge through yelp reviews to find the most relevant reviews for what I want at a given time.
+So I wondered, could I create a clustered topic model for pizza reviews on Yelp? It turns out Yelp offers a slice of their data for academic purposes as well as an API. To test the pizza waters in Yelp land, I am going to test out their academic dataset first to see if I can prototype something useful.
 
 
-### read and clean the data
+### Read and clean the data
 
 The data that was used for the post can be downloaded from the following URL [Yelp Dataset](https://www.yelp.com/dataset/challenge "10th Iteration Data").
 
@@ -40,12 +43,19 @@ The words represented in the follow topic clusters:
 
 
 <span style="color:black">O</span> Black clustered words are related to upscale entrees.
+
 <span style="color:yellow">O</span> Yellow clustered words are related to price.
+
 <span style="color:navy">O</span> Navy clustered words are related to service.
+
 <span style="color:pink">O</span> Pink clustered words are related to hours and events.
+
 <span style="color:orange">O</span> Orange clustered words are related to location.
+
 <span style="color:blue">O</span> Blue clustered words are related to Foriegn languages.
+
 <span style="color:red">O</span> Red clustered words are related to upscale entrees.
+
 <span style="color:green">O</span> Green clustered words are everything else.
 
 <html lang="en">
@@ -116,3 +126,11 @@ The words represented in the follow topic clusters:
         </script>
     </body>
 </html>
+
+
+### Conclusion
+
+Great so I have an interactive plot that looks like a cheap knock off of a google logo, what can I do with this? 
+We have done multiple stages of unsupervised learning to cluster our data into different categories. This could be used for a number of applications. If this were a project for a real company/problem, this approach could be used to pipe customers to various treatments based on their reviewing behavior. Say someone posts about upscale entrees, grouped in red in the plot above, perhaps your engagement with those customers than with customers who reviews are more oriented towards price. Even though tuning this model took some time for me to optimize and to try out different algorithms, it is still amazing to me that the models themselves can find such robust patterns in the data. While this was trained on the academic data set, I am seriously considering creating a version of this model with their API. I absolutely love the idea of tailoring my Yelp search to topics that I am interested in at any given time. Say I am in Portland and want to get a local brew with my pie, I could apply that model to only search for beer related pizza review! Perhaps I am in chicago and want the most upscale pizza I can find, I could use that cluster to find reviews in Chicago that are relevant. 
+
+
