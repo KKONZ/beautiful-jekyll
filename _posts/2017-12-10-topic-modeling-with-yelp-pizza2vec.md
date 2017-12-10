@@ -120,7 +120,7 @@ Prior to settling on a Spectral Clustering model, I had tested DBSCAN and 2 of t
 #### The words represented in the follow topic clusters:
 
 
-<span style="color:black">O</span> Black clustered words are related to upscale entrees.
+<span style="color:black">O</span> Black clustered words are related to drinks, deserts, and texture.
 
 <span style="color:yellow">O</span> Yellow clustered words are related to price.
 
