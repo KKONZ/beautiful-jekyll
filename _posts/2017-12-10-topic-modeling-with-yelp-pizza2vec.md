@@ -38,29 +38,23 @@ Prior to settling on a Spectral Clustering model, I had tested DBSCAN and 2 of t
 
 The words represented in the follow topic clusters:
 
-p {
-  text-decoration: underline;
-  -webkit-text-decoration-color: red; /* safari still uses vendor prefix */
-  text-decoration-color: red;
-}
 
-<p>black text with red underline in one element - no wrapper elements here!</p>
 
-* <span style="color:yellow">*Yellow</span> Yellow clustered words are related to price.
+* <span style="color:yellow">YELLOW</span> clustered words are related to price.
 
-* <span style="color:navy">*</span> Navy clustered words are related to service.
+* <span style="color:navy">NAVY</span> clustered words are related to service.
 
-* <span style="color:pink">*</span> Pink clustered words are related to hours and events.
+* <span style="color:pink">PINK</span> clustered words are related to hours and events.
 
-* <span style="color:orange">*</span> Orange clustered words are related to location.
+* <span style="color:orange">ORANGE</span> clustered words are related to location.
 
-* <span style="color:blue">*</span> Blue clustered words are related to Foriegn languages.
+* <span style="color:blue">BLUE</span> clustered words are related to Foriegn languages.
 
-* <span style="color:red">*</span> Red clustered words are related to upscale entrees.
+* <span style="color:red">RED</span> clustered words are related to upscale entrees.
 
-* <span style="color:black">*</span> Black clustered words are related to upscale entrees.
+* <span style="color:black">BLACK</span> clustered words are related to upscale entrees.
 
-* <span style="color:green">*</span> Green clustered words are everything else.
+* <span style="color:green">GREEN</span> clustered words are everything else.
 
 <html lang="en">
     <head>
