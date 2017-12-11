@@ -4,9 +4,9 @@ published: true
 title: 'Topic Modeling with Yelp, Pizza2vec'
 ---
 ## Topic Modeling in Yelp
-One of my favorite things in this wonderful world is a good pizza. Arguably my first real love, pizza has taught me some of the most important things to be learn in life. Beyond just having incredibly easy and consistent dinner suggestions (good pizza will ALWAYS make that list), I was fortunate enough to gain some foundational business experience having managed a local pizza shop in cozy St. Cloud MN as a teen. 
+One of my favorite things in this wonderful world is a good pizza. Arguably my first real love, pizza has taught me some of the most important things to be learn in life. Beyond making dinner decisions incredibly easy _good pizza will ALWAYS make that list_, I was fortunate enough to gain some foundational business experience having managed a local pizza shop in cozy St. Cloud MN as a teen. 
 
-I have only been to New York City once in my life and was only there for a weekend, but of course pizza had to be a focal point of the trip. Knowing where to go was really easy thanks to my graduate school percussion teacher at the time who tipped me off to such greats as Lombardos, World of Pizza, and Angelos. In addition to spending time with friends, the awesome food made the trip that much more memorable and fun. I love checking out local pizza spots when I travel, but the problem is that I am usually really busy when I am traveling so I don’t have time to scourge through yelp reviews to find the most relevant reviews for what I want at a given time and place.
+I have only been to New York City once in my life,for a weekend, and of course pizza had to be a focal point of the trip. Knowing where to go was really easy thanks to some solid suggestions from my graduate school percussion teacher at the time who tipped me off to such greats as Lombardos, World of Pizza, and Angelos. In addition to spending time with friends, the awesome food made the trip that much more memorable and fun. I love checking out local pizza spots when I travel, but the problem is that I am usually way too busy when I am traveling to scourge through yelp reviews to find the most relevant reviews for what I want at a given time and place.
 
 So I wondered, could I create a clustered topic model for pizza reviews on Yelp? It turns out Yelp offers a slice of their data for academic purposes as well as an API. To test the pizza waters in Yelp land, I am going to test out their academic dataset first to see if I can prototype something useful before considering  a more robust solution.
 
@@ -128,12 +128,11 @@ p = figure(...
 #### The words represented in the follow topic clusters:
 
 
-* <span style="color:black"><font size="5.5">Black Cluster</font></span>. The words in this cluster appear to be related to drinks, deserts, and texture. There appears to be 3 distinct sub clusters within this black cluster for each of the related word topics.
+* <span style="color:black"><font size="5.5">Black Cluster</font></span>. There is a bit of peridolia for me with this cluster. The right eye of this perhaps inhebrated smiley face is devoted to booze and the left eye is a cluster related to deserts. The mouth or lower region is related to mouth feel, texture, and presentation.
 
 * <span style="color:yellow"><font size="5.5">Yellow Cluster</font></span>. Words in this cluster are related to price. This is a pretty isolated cluster, relatively speaking, and is very dense compared to the spread of the other clusters.
 
-* <span style="color:navy"><font size="5.5">Navy Cluster</font></span>. When I started this project I was pretty sure that in some shape or form I would be able to identify the cliche snoody review, well this cluster seems to be it. Generally speaking this cluster appears to be related to service, where the majority of the words seem to insinuate service worthy of a jail sentence and a small sliver along the lower edge of the cluster appears to be related to positive reviews about service.
-It makes sense that people would be a bit more affected by the service then the actual food at a restaurant, hover with caution in this section! You have been warned.
+* <span style="color:navy"><font size="5.5">Navy Cluster</font></span>. When I started this project I was pretty sure that in some shape or form I would be able to identify the cliche snoody review, well this cluster seems to be the key. Generally speaking this cluster appears to be related to service, where the many of the topic words in this space seem non-satisfactory reviews. It makes sense that people would be a bit more affected by the service then the actual food at a restaurant. Having been on both sides of this eqution I know there can be very unreasonable customers and also unacceptable service from some who clearly does not care you or your food. I wasn't totally sure if these types of topic words would be more general or within a more specific cluster such as this one or the food cluster in red.
 
 * <span style="color:pink"><font size="5.5">Pink Cluster</font></span>. Pink clustered words are related to hours and events. There is a dense section in this area designated to sporting events. My gut would have been to guess that sporting events would some how be related to drinks and bars, but being associated with events and timing actually makes much more sense. There are also 2 distinct dense subclusters around time in minutes, likely relating to delivery time, seating time, or the time it took to prepare a meal in general. The other is related to time of day, this would likely related to specials like happy hour and events like bands and what not.
 
@@ -141,9 +140,9 @@ It makes sense that people would be a bit more affected by the service then the 
 
 * <span style="color:blue"><font size="5.5">Blue Cluster</font></span>. This cluster is predominately related to foriegn words, with 2 dense clusters for French and German.
 
-* <span style="color:red"><font size="5.5">Red Cluster</font></span>. This cluster is related to upscale entrees. There seems to be sub regions for things like salads, sandwichs, and wings as well. Most of the words in this topic cluster are related to fine dining entrees though.
+* <span style="color:red"><font size="5.5">Red Cluster</font></span>. This cluster is related to ingredients and food items. There is a fairly dense and wide area that sees to be mainly bar and american grill and fryer style food items which has a tail from sushi style items to asian foods. Authentic Italian has its own fairly isolated dense cluster within this red cluster. Other styles of items seem to be outliers in this representation of the data.
 
-* <span style="color:green"><font size="5.5">Green Cluster</font></span>. The words in this cluster have less affinity than those in the other groups. These appear to be mostly words that are a bit more general than some of the other clusters. The densest looking cluster, in the lower right region, is all related to names.
+* <span style="color:green"><font size="5.5">Green Cluster</font></span>. The words in this cluster have less affinity than those in the other groups. These appear to be mostly words that are a bit more general than some of the other clusters. The densest looking cluster, in the lower right region, is all related to names. The next densest layer was table types, mostly fine dining tables and the next was for the floor of the building, most likely for the location of the restaurant.
 
 ### Conclusion
 
