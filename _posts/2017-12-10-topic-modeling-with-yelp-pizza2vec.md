@@ -128,21 +128,21 @@ p = figure(...
 #### The words represented in the follow topic clusters:
 
 
-<span style="color:black">## O</span> Black clustered words are related to drinks, deserts, and texture.
+<span style="color:black"><font size="10">O</font></span> Black clustered words are related to drinks, deserts, and texture.
 
-<span style="color:yellow">## O</span> Yellow clustered words are related to price.
+<span style="color:yellow">O</span> Yellow clustered words are related to price.
 
-<span style="color:navy">## O</span> Navy clustered words are related to service.
+<span style="color:navy">O</span> Navy clustered words are related to service.
 
-<span style="color:pink">## O</span> Pink clustered words are related to hours and events.
+<span style="color:pink">O</span> Pink clustered words are related to hours and events.
 
-<span style="color:orange">## O</span> Orange clustered words are related to location.
+<span style="color:orange">O</span> Orange clustered words are related to location.
 
-<span style="color:blue">## _O_</span> Blue clustered words are related to Foriegn languages.
+<span style="color:blue">O</span> Blue clustered words are related to Foriegn languages.
 
-<span style="color:red">## **O**</span> Red clustered words are related to upscale entrees.
+<span style="color:red">O</span> Red clustered words are related to upscale entrees.
 
-<span style="color:green">## __O__</span> Green clustered words are everything else.
+<span style="color:green">O</span> Green clustered words are everything else.
 
 ### Conclusion
 
