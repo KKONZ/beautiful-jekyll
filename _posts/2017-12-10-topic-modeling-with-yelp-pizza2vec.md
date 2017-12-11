@@ -128,23 +128,41 @@ p = figure(...
 #### The words represented in the follow topic clusters:
 
 
-<span style="color:black"><font size="10">O</font></span> Black clustered words are related to drinks, deserts, and texture.
+<span style="color:black"><font size="10">Black Cluster</font></span> 
 
-<span style="color:yellow">O</span> Yellow clustered words are related to price.
+The words in this cluster appear to be related to drinks, deserts, and texture. There appears to be 3 distinct sub clusters within this black cluster for each of the related word topics.
 
-<span style="color:navy">O</span> Navy clustered words are related to service.
+<span style="color:yellow"><font size="10">Yellow Cluster</font></span></span> 
 
-<span style="color:pink">O</span> Pink clustered words are related to hours and events.
+Words in this cluster are related to price. This is a pretty isolated cluster, relatively speaking, and is very dense compared to the spread of the other clusters.
 
-<span style="color:orange">O</span> Orange clustered words are related to location.
+<span style="color:navy"><font size="10">Navy Cluster</font></span></span> 
 
-<span style="color:blue">O</span> Blue clustered words are related to Foriegn languages.
+When I started this project I was pretty sure that in some shape or form I would be able to identify the cliche snoody review, well this cluster seems to be it. Generally speaking this cluster appears to be related to service, where the majority of the words seem to insinuate service worthy of a jail sentence and a small sliver along the lower edge of the cluster appears to be related to positive reviews about service.
+It makes sense that people would be a bit more affected by the service then the actual food at a restaurant, hover with caution in this section! You have been warned.
 
-<span style="color:red">O</span> Red clustered words are related to upscale entrees.
+<span style="color:pink"><font size="10">Pink Cluster</font></span></span> 
 
-<span style="color:green">O</span> Green clustered words are everything else.
+Pink clustered words are related to hours and events. There is a dense section in this area designated to sporting events. My gut would have been to guess that sporting events would some how be related to drinks and bars, but being associated with events and timing actually makes much more sense. There are also 2 distinct dense subclusters around time in minutes, likely relating to delivery time, seating time, or the time it took to prepare a meal in general. The other is related to time of day, this would likely related to specials like happy hour and events like bands and what not.
+
+<span style="color:orange"><font size="10">Orange Cluster</font></span></span> 
+
+The words in this cluster are related to a place or location. Most of the words have to do with street names and cities.
+
+<span style="color:blue"><font size="10">Blue Cluster</font></span></span> 
+
+This cluster is predominately related to foriegn words, with 2 dense clusters for French and German.
+
+<span style="color:red"><font size="10">Red Cluster</font></span></span> 
+
+This cluster is related to upscale entrees. There seems to be sub regions for things like salads, sandwichs, and wings as well. Most of the words in this topic cluster are related to fine dining entrees though.
+
+<span style="color:green"><font size="10">Green Cluster</font></span></span> 
+
+The words in this cluster have less affinity than those in the other groups. These appear to be mostly words that are a bit more general than some of the other clusters. The densest looking cluster, in the lower right region, is all related to names.
 
 ### Conclusion
 
 Great so I have an interactive plot that looks like a cheap knock off of a google logo, so what can I do with this? 
+
 This model could be used for a number of applications. If this were a project for a real company/problem, this approach could be used to pipe customers to various treatments based on their reviewing behavior. Say someone posts about upscale entrees, grouped in red in the plot above, then your engagement with those customers may be more focused on menu items, where ash customers who reviews are more oriented towards price you may want to send more coupons or something. Even though tuning this model took some time for me to optimize and to try out different algorithms, it is still amazing to me that the models themselves can find such robust patterns in the data. While this was trained on the academic data set, I am seriously considering creating a version of this model with their API. I absolutely love the idea of tailoring my Yelp search to topics that I am interested in at any given time. Say I am in Portland and want to get a local brew with my pie, I could apply that model to only search for beer related pizza review! Perhaps I am in chicago and want the most upscale pizza I can find, I could use that cluster to find reviews in Chicago that are relevant.
