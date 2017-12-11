@@ -13,13 +13,11 @@ So I wondered, could I create a clustered topic model for pizza reviews on Yelp?
 
 ### Read the data into Python
 
-The data that was used for the post can be downloaded from the following URL [Yelp Dataset](https://www.yelp.com/dataset/challenge "10th Iteration Data").
+The data that was used for the post can be downloaded from the following URL [Yelp Dataset](https://www.yelp.com/dataset/challenge "10th Iteration Data"). The data is available in both SQL and JSON, I chose to download the JSON version and read the data into python with JSON package I used codecs to iterate through the json files and write to txt files. Instead of topic modeling on the entire roughly 3 million review restaurants, I chose instead to subset to reviews that contained the word pizza. There is a phenomenal pycon presentation from Patrick Harrison on modern natural language processing which uses a similar approach to this. I highly recomend watching that video if you are intersted in learning more about what is going on behind the hood for common natural language processing transformations. A general snippet for reading the business and review data files is shown below.
 
-The data is available in both SQL and JSON, I chose to download the JSON version and read the data into python with JSON package I used codecs to iterate through the json files and write to txt files. Instead of topic modeling on the entire roughly 3 million review restaurants, I chose instead to subset to reviews that contained the word pizza. 
+```python
 
-For the purpose of this blog I am going to skip over the code to clean the data, but have the build code for this project available in my github account HERE.
-
-Next it is necessary to prepare the text data for meaningful results for our model.
+```
 
 ### Preparing the text for modeling
 
@@ -53,7 +51,7 @@ p = figure(...
 		output_backend = "webgl"
         ...)
 ```
-
+The full code is available in my repository KKONZ/Springboard/Capstone%202
 
 
 <html lang="en">
