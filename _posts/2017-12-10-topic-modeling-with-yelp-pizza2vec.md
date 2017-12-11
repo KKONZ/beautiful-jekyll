@@ -128,38 +128,22 @@ p = figure(...
 #### The words represented in the follow topic clusters:
 
 
-<span style="color:black"><font size="7">Black Cluster</font></span> 
+* <span style="color:black"><font size="5">Black Cluster</font></span> The words in this cluster appear to be related to drinks, deserts, and texture. There appears to be 3 distinct sub clusters within this black cluster for each of the related word topics.
 
-The words in this cluster appear to be related to drinks, deserts, and texture. There appears to be 3 distinct sub clusters within this black cluster for each of the related word topics.
+* <span style="color:yellow"><font size="5">Yellow Cluster</font></span> Words in this cluster are related to price. This is a pretty isolated cluster, relatively speaking, and is very dense compared to the spread of the other clusters.
 
-<span style="color:yellow"><font size="7">Yellow Cluster</font></span>
-
-Words in this cluster are related to price. This is a pretty isolated cluster, relatively speaking, and is very dense compared to the spread of the other clusters.
-
-<span style="color:navy"><font size="7">Navy Cluster</font></span> 
-
-When I started this project I was pretty sure that in some shape or form I would be able to identify the cliche snoody review, well this cluster seems to be it. Generally speaking this cluster appears to be related to service, where the majority of the words seem to insinuate service worthy of a jail sentence and a small sliver along the lower edge of the cluster appears to be related to positive reviews about service.
+* <span style="color:navy"><font size="5">Navy Cluster</font></span> When I started this project I was pretty sure that in some shape or form I would be able to identify the cliche snoody review, well this cluster seems to be it. Generally speaking this cluster appears to be related to service, where the majority of the words seem to insinuate service worthy of a jail sentence and a small sliver along the lower edge of the cluster appears to be related to positive reviews about service.
 It makes sense that people would be a bit more affected by the service then the actual food at a restaurant, hover with caution in this section! You have been warned.
 
-<span style="color:pink"><font size="7">Pink Cluster</font></span>
+* <span style="color:pink"><font size="5">Pink Cluster</font></span> Pink clustered words are related to hours and events. There is a dense section in this area designated to sporting events. My gut would have been to guess that sporting events would some how be related to drinks and bars, but being associated with events and timing actually makes much more sense. There are also 2 distinct dense subclusters around time in minutes, likely relating to delivery time, seating time, or the time it took to prepare a meal in general. The other is related to time of day, this would likely related to specials like happy hour and events like bands and what not.
 
-Pink clustered words are related to hours and events. There is a dense section in this area designated to sporting events. My gut would have been to guess that sporting events would some how be related to drinks and bars, but being associated with events and timing actually makes much more sense. There are also 2 distinct dense subclusters around time in minutes, likely relating to delivery time, seating time, or the time it took to prepare a meal in general. The other is related to time of day, this would likely related to specials like happy hour and events like bands and what not.
+* <span style="color:orange"><font size="5">Orange Cluster</font></span> The words in this cluster are related to a place or location. Most of the words have to do with street names and cities.
 
-<span style="color:orange"><font size="7">Orange Cluster</font></span>
+* <span style="color:blue"><font size="5">Blue Cluster</font></span> This cluster is predominately related to foriegn words, with 2 dense clusters for French and German.
 
-The words in this cluster are related to a place or location. Most of the words have to do with street names and cities.
+<span style="color:red"><font size="5">Red Cluster</font></span> This cluster is related to upscale entrees. There seems to be sub regions for things like salads, sandwichs, and wings as well. Most of the words in this topic cluster are related to fine dining entrees though.
 
-<span style="color:blue"><font size="7">Blue Cluster</font></span> 
-
-This cluster is predominately related to foriegn words, with 2 dense clusters for French and German.
-
-<span style="color:red"><font size="7">Red Cluster</font></span> 
-
-This cluster is related to upscale entrees. There seems to be sub regions for things like salads, sandwichs, and wings as well. Most of the words in this topic cluster are related to fine dining entrees though.
-
-<span style="color:green"><font size="7">Green Cluster</font></span>
-
-The words in this cluster have less affinity than those in the other groups. These appear to be mostly words that are a bit more general than some of the other clusters. The densest looking cluster, in the lower right region, is all related to names.
+<span style="color:green"><font size="5">Green Cluster</font></span>The words in this cluster have less affinity than those in the other groups. These appear to be mostly words that are a bit more general than some of the other clusters. The densest looking cluster, in the lower right region, is all related to names.
 
 ### Conclusion
 
