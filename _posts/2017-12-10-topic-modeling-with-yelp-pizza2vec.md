@@ -6,6 +6,8 @@ title: 'Topic Modeling with Yelp, Pizza2vec'
 ## Topic Modeling in Yelp
 One of my favorite things in this wonderful world is a good pizza. Arguably my first real love, pizza has taught me some of the most important things to be learn in life. Beyond making dinner decisions incredibly easy _good pizza will ALWAYS make that list_, I was fortunate enough to gain some foundational business experience having managed a local pizza shop in cozy St. Cloud MN as a teen. 
 
+<img src="https://s3-media4.fl.yelpcdn.com/bphoto/f8yLBjYmCwiB3BnfYh8d-g/o.jpg" alt="Lombardi's">
+
 I have only been to New York City once in my life,for a weekend, and of course pizza had to be a focal point of the trip. Knowing where to go was really easy thanks to some solid suggestions from my graduate school percussion teacher at the time who tipped me off to such greats as Lombardos, World of Pizza, and Angelos. In addition to spending time with friends, the awesome food made the trip that much more memorable and fun. I love checking out local pizza spots when I travel, but the problem is that I am usually way too busy when I am traveling to scourge through yelp reviews to find the most relevant reviews for what I want at a given time and place.
 
 So I wondered, could I create a clustered topic model for pizza reviews on Yelp? It turns out Yelp offers a slice of their data for academic purposes as well as an API. To test the pizza waters in Yelp land, I am going to test out their academic dataset first to see if I can prototype something useful before considering  a more robust solution.
