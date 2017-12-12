@@ -1,6 +1,6 @@
 ---
 layout: post
-published: true
+published: false
 title: 'Topic Modeling with Yelp, Pizza2vec'
 ---
 ## Topic Modeling in Yelp
@@ -117,7 +117,7 @@ This maximization objective is represented mathematically below
   </mrow>
 </math>
 
-where <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>Q</mi><mi>&#x03B8;<!-- θ --></mi></msub><mo stretchy="false">(</mo><mi>D</mi><mo>=</mo><mn>1</mn><mo stretchy="false">|</mo><mi>w</mi><mo>,</mo><mi>h</mi><mo stretchy="false">)</mo></math> is binary logistic regression probabilty of seeing <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>w</mi></math> in context <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>h</mi></math> of dataset <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>D</mi></math> in embedded leared vectors <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>&#x03B8;<!-- θ --></mi></math> where <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math> contrastive words are approximated from the [Monte Carlo average]("https://en.wikipedia.org/wiki/Monte_Carlo_integration") computed noise distribution.
+where <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>Q</mi><mi>&#x03B8;<!-- θ --></mi></msub><mo stretchy="false">(</mo><mi>D</mi><mo>=</mo><mn>1</mn><mo stretchy="false">|</mo><mi>w</mi><mo>,</mo><mi>h</mi><mo stretchy="false">)</mo></math> is binary logistic regression probabilty of seeing <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>w</mi></math> in context <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>h</mi></math> of dataset <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>D</mi></math> in embedded learned vectors <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>&#x03B8;<!-- θ --></mi></math> where <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math> contrastive words are approximated from the [Monte Carlo average]("https://en.wikipedia.org/wiki/Monte_Carlo_integration") computed noise distribution.
 
 The images and mathML code were borrowed from https://www.tensorflow.org/tutorials/word2vec.
 Tensorflow has awesome documentation, go there and or their github repositories to learn more.
