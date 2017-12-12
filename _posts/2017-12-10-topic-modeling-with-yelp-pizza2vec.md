@@ -128,20 +128,26 @@ Next we use a dimension reduction technique called t distributed neighbor embedd
 
 
 
-
+### Clustering
 
 The clusters make sense but are not labeled at this point, and would be more useful if they were. 
 
 I attempted to use a variety of unsupervised learning techniques to find clusters that made sense. The Kmeans models seemed to miss inaccurately group some obvious clusters and the DBSCAN seemed to have trouble discerning a signal from the noise. Using a Spectral Clustering technique seemed to do really well though! 
 Without tuning the Spectral Clustering algorithm, 8 kernals were detected. The center, or most dense region of group of words was represented as one cluster and most of the others were in another cluster and the outliers of the clusters represnted the other 6 kernals. Tuning this algorithm for nearest neighbors affinity and kmeans labels did very well! The code below represents how I trained the clustering algorithm using the python package sklearn.
+[]("https://wikimedia.org/api/rest_v1/media/math/render/svg/e2ffa34f5ec9228fada171c055d5c5f3ee63e87e")
 
 ```python
+# Creating a Spectral Clustering model
+
 from sklearn.cluster import SpectralClustering
 sc = SpectralClustering(affinity = 'nearest_neighbors', assign_labels = 'kmeans'
-
 ```
 
 Prior to settling on a Spectral Clustering model, I had tested DBSCAN and 2 of the best silhouette scored Kmeans for 3 and 7 kernals. The DBSCAN model created 125 different clusters that didn't appear to be useful whatsoever. Both the KMeans models did an OK job of clustering the words, but the kmeans model with 3 kernals split the topic cluster of price into 2 differnt broader clusters and the kmeans model with 7 kernals split and obvious cluster of people names into 2 different broader clusters as well. The spectral clustering approach appeared to have done an excellent job of finding related words based on the words tsne coordinates. 
+
+
+
+
 
 The interactive plot below was created in Bokeh, in order to get the plot to have all the functionality I wanted, the size of the html code ended up being really huge. In order to optimze the performance, I used WebGL back which can be enabled in one line of code.
 
