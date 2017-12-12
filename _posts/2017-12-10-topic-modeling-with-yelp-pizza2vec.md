@@ -1,6 +1,6 @@
 ---
 layout: post
-published: true
+published: false
 title: 'Topic Modeling with Yelp, Pizza2vec'
 ---
 ## Topic Modeling in Yelp
@@ -133,9 +133,7 @@ Next we use a dimension reduction technique called t distributed neighbor embedd
 It is very common to use KMeans as a clustering solution after performing t-sne reduction. I experimented first computing a variety of kernals and found, based on the silhouette scores, that 3 and 7 kernals did the best. Both of those solutions miss clustered some obvious kernals though, splitting them in half. Next I tried DBSCAN but that solution had trouble discerning a signal from the noise creating 125 different kernals where the vast majority of observations were assigned to one cluster and only a few words were assigned to the remaining 124 kernals. 
 
 
-Spectral Clustering, a clear winner!
-
-Tuning this algorithm for nearest neighbors graph and kmeans labels, a higher granulatrity solution than descrete, did very well! Kmeans labeling can be unstable and unreproducible but seemed to do really well for this problem. The code below represents how I trained the clustering algorithm using the python package sklearn.
+Spectral Clustering, a clear winner! The code below represents how I trained the clustering algorithm using the python package sklearn.
 
 
 ```python
