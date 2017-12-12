@@ -27,7 +27,7 @@ Text data can be very highly dimensional. If proper steps are not taken to clean
 All of the natural language processing has thus far been achieved using the python package Spacy. You can build you own stopword vocabulary in Spacy. I did choose to use NLTK to remove stopwords as they have a list ready to use out of the box. To do this step in Spacy I would have to build my own stopword dictionary and decided that wasn't necessary for this project. Finally I used Latent Direlecht Allocation to transform the data into a bag of words representation.
 
 
-### Modeling the Data
+### Word2vec
 
 The first step in modeling the data was to use the package Gensim to represent the words in a highly dimensional vector space to create a continuous bag of words word2vec model. This uses a discriminate approach using a binary logistic regression classification object for target words, <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>w</mi><mi>t</mi></msub></math>, and <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math> imaginary words <math xmlns="http://www.w3.org/1998/Math/MathML"><mover><mi>w</mi><mo stretchy="false">&#x007E;<!-- ~ --></mo></mover></math>
 
@@ -115,7 +115,49 @@ This maximization objective is represented mathematically below
   </mrow>
 </math>
 
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <msub>
+    <mi>Q</mi>
+    <mi>&#x03B8;<!-- θ --></mi>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>D</mi>
+  <mo>=</mo>
+  <mn>1</mn>
+  <mo stretchy="false">|</mo>
+  <mi>w</mi>
+  <mo>,</mo>
+  <mi>h</mi>
+  <mo stretchy="false">)</mo>
+</math> is binary logistic regression probabilty of seeing <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <msub>
+    <mi>Q</mi>
+    <mi>&#x03B8;<!-- θ --></mi>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>D</mi>
+  <mo>=</mo>
+  <mn>1</mn>
+  <mo stretchy="false">|</mo>
+  <mi>w</mi>
+  <mo>,</mo>
+  <mi>h</mi>
+  <mo stretchy="false">)</mo>
+</math> in context <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>h</mi>
+</math> of dataset <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>D</mi>
+</math> in embedded leared vectors <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>&#x03B8;<!-- θ --></mi>
+</math>
+</math> where <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mi>k</mi>
+</math> contrastive words are approximated from the [Monte Carlo average]("https://en.wikipedia.org/wiki/Monte_Carlo_integration") computed noise distribution.
 
+The images and mathML code were borrowed from https://www.tensorflow.org/tutorials/word2vec.
+Tensorflow has awesome documentation, go there and or their github repositories to learn more.
+
+### t-sne
 
 Next we use a dimension reduction technique called t distributed neighbor embedding, t-sne. This reduced the dimensional space to an x and a y coordinate and similar topic words will be clustered together. 
 
