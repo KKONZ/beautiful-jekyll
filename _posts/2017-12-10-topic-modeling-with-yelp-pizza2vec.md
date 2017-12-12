@@ -39,6 +39,86 @@ $J_\text{NEG} = \log Q_\theta(D=1 |w_t, h) +
   k \mathop{\mathbb{E}}_{\tilde w \sim P_\text{noise}}
      \left[ \log Q_\theta(D = 0 |\tilde w, h) \right]$
 
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <msub>
+    <mi>J</mi>
+    <mtext>NEG</mtext>
+  </msub>
+  <mo>=</mo>
+  <mi>log</mi>
+  <mo>&#x2061;<!-- ⁡ --></mo>
+  <msub>
+    <mi>Q</mi>
+    <mi>&#x03B8;<!-- θ --></mi>
+  </msub>
+  <mo stretchy="false">(</mo>
+  <mi>D</mi>
+  <mo>=</mo>
+  <mn>1</mn>
+  <mrow class="MJX-TeXAtom-ORD">
+    <mo stretchy="false">|</mo>
+  </mrow>
+  <msub>
+    <mi>w</mi>
+    <mi>t</mi>
+  </msub>
+  <mo>,</mo>
+  <mi>h</mi>
+  <mo stretchy="false">)</mo>
+  <mo>+</mo>
+  <mi>k</mi>
+  <munder>
+    <mrow class="MJX-TeXAtom-OP">
+      <mrow class="MJX-TeXAtom-ORD">
+        <mi mathvariant="double-struck">E</mi>
+      </mrow>
+    </mrow>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mrow class="MJX-TeXAtom-ORD">
+        <mover>
+          <mi>w</mi>
+          <mo stretchy="false">&#x007E;<!-- ~ --></mo>
+        </mover>
+      </mrow>
+      <mo>&#x223C;<!-- ∼ --></mo>
+      <msub>
+        <mi>P</mi>
+        <mtext>noise</mtext>
+      </msub>
+    </mrow>
+  </munder>
+  <mo>&#x2061;<!-- ⁡ --></mo>
+  <mrow>
+    <mo>[</mo>
+    <mi>log</mi>
+    <mo>&#x2061;<!-- ⁡ --></mo>
+    <msub>
+      <mi>Q</mi>
+      <mi>&#x03B8;<!-- θ --></mi>
+    </msub>
+    <mo stretchy="false">(</mo>
+    <mi>D</mi>
+    <mo>=</mo>
+    <mn>0</mn>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mo stretchy="false">|</mo>
+    </mrow>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mover>
+        <mi>w</mi>
+        <mo stretchy="false">&#x007E;<!-- ~ --></mo>
+      </mover>
+    </mrow>
+    <mo>,</mo>
+    <mi>h</mi>
+    <mo stretchy="false">)</mo>
+    <mo>]</mo>
+  </mrow>
+</math>
+
+
+
 Next we use a dimension reduction technique called t distributed neighbor embedding, t-sne. This reduced the dimensional space to an x and a y coordinate and similar topic words will be clustered together. 
 
 
