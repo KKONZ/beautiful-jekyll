@@ -35,9 +35,9 @@ The first step in modeling the data was to use the package Gensim to represent t
 
 This maximization objective is represented mathematically below.
 
-J_\text{NEG} = \log Q_\theta(D=1 |w_t, h) +
+$J_\text{NEG} = \log Q_\theta(D=1 |w_t, h) +
   k \mathop{\mathbb{E}}_{\tilde w \sim P_\text{noise}}
-     \left[ \log Q_\theta(D = 0 |\tilde w, h) \right]
+     \left[ \log Q_\theta(D = 0 |\tilde w, h) \right]$
 
 Next we use a dimension reduction technique called t distributed neighbor embedding, t-sne. This reduced the dimensional space to an x and a y coordinate and similar topic words will be clustered together. 
 
