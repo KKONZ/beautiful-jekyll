@@ -128,9 +128,7 @@ Next we use a dimension reduction technique called t distributed neighbor embedd
 
 
 
-### Clustering
-
-The clusters make sense but are not labeled at this point, and would be more useful if they were. 
+### Clustering 
 
 I attempted to use a variety of unsupervised learning techniques to find clusters that made sense. The Kmeans models seemed to miss inaccurately group some obvious clusters and the DBSCAN seemed to have trouble discerning a signal from the noise. Using a Spectral Clustering technique seemed to do really well though! 
 Without tuning the Spectral Clustering algorithm, 8 kernals were detected. The center, or most dense region of group of words was represented as one cluster and most of the others were in another cluster and the outliers of the clusters represnted the other 6 kernals. Tuning this algorithm for nearest neighbors affinity and kmeans labels did very well! The code below represents how I trained the clustering algorithm using the python package sklearn.
