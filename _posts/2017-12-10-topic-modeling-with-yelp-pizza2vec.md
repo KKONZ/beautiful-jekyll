@@ -30,16 +30,14 @@ All of the natural language processing has thus far been achieved using the pyth
 ### Modeling the Data
 
 The first step in modeling the data was to use the package Gensim to represent the words in a highly dimensional vector space to create a continuous bag of words word2vec model. This uses a discriminate approach using a binary logistic regression classification object for target words, wt, and k imaginary words 
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mover>
+    <mi>w</mi>
+    <mo stretchy="false">&#x007E;<!-- ~ --></mo>
+  </mover>
+</math>
 
-\tilde w
-
-$\tilde w$
-
-$$\tilde w$$
-
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">$\tilde w$</script>
-
-, in the same context. Below is an illustration of what is happening in continuous bag of word modeling. 
+Below is an illustration of what is happening in continuous bag of word modeling. 
 
 <img src="https://www.tensorflow.org/images/nce-nplm.png" alt="CBOW">
 
