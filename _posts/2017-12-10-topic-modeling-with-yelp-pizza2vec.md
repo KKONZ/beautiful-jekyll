@@ -10,7 +10,7 @@ One of my favorite things in this wonderful world is a good pizza. Arguably my f
 
 I have only been to New York City once in my life, for a weekend, and pizza became a focal point of the trip. Knowing where to go was really easy thanks to some solid suggestions from my graduate school percussion teacher who tipped me off to such greats as Lombardi's, the oldest pizzaria in NYC, and Angelos. In addition to spending time with friends, the awesome food made the trip that much more memorable and fun. 
 
-***I love checking out great local pizza spots when I travel, but I am usually way too busy to find the most relevant reviews for what I want at a given time and place. So I wondered, could I create a clustered topic model for pizza reviews on Yelp to help me narrow down reviews that I care about?***
+***I love checking out great local pizza spots when I travel, but I am usually way too busy to find the most relevant reviews for what I want at a given time and place. So I wondered, could I create a clustered topic model for pizza reviews on Yelp?***
 
 It turns out Yelp offers a _slice_ of their data for academic purposes as well as an API. To test the pizza waters in Yelp land, I am going to use their academic dataset first to see if I can prototype something useful before considering  a more robust solution.
 
