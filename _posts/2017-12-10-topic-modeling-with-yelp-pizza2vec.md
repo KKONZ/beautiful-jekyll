@@ -29,15 +29,25 @@ All of the natural language processing has thus far been achieved using the pyth
 
 ### Modeling the Data
 
-The first step in modeling the data was to use the package Gensim to represent the words in a highly dimensional vector space to create a continuous bag of words word2vec model. This uses a discriminate approach using a binary logistic regression classification object for target words, $text{w}_(t)$ and $text{k}$ imaginary words.
+The first step in modeling the data was to use the package Gensim to represent the words in a highly dimensional vector space to create a continuous bag of words word2vec model. This uses a discriminate approach using a binary logistic regression classification object for target words, 
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <msub>
+    <mi>w</mi>
+    <mi>t</mi>
+  </msub>
+</math>
+and 
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <msub>
+    <mi>w</mi>
+    <mi>t</mi>
+  </msub>
+</math>
+imaginary words.
 
 <img src="https://www.tensorflow.org/images/nce-nplm.png" alt="CBOW">
 
-This maximization objective is represented mathematically below.
-
-$J_\text{NEG} = \log Q_\theta(D=1 |w_t, h) +
-  k \mathop{\mathbb{E}}_{\tilde w \sim P_\text{noise}}
-     \left[ \log Q_\theta(D = 0 |\tilde w, h) \right]$
+This maximization objective is represented mathematically below
 
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
