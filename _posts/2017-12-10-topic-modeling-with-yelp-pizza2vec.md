@@ -37,6 +37,8 @@ $\tilde w$
 
 $$\tilde w$$
 
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">\tilde w</script>
+
 , in the same context. Below is an illustration of what is happening in continuous bag of word modeling. 
 
 <img src="https://www.tensorflow.org/images/nce-nplm.png" alt="CBOW">
