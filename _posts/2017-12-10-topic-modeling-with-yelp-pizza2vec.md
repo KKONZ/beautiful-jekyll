@@ -4,7 +4,7 @@ published: true
 title: 'Topic Modeling with Yelp, Pizza2vec'
 ---
 ## Topic Modeling in Yelp
-One of my favorite things in this wonderful world is a good pizza. Arguably my first real love, pizza has taught me some of the most important things to be learn in life. Beyond making dinner decisions incredibly easy _good pizza will ALWAYS make that list_, I was fortunate enough to gain some foundational business experience having managed a local pizza shop in cozy St. Cloud MN as a teen. 
+One of my favorite things in this wonderful world is a good pizza. Arguably my first real love, pizza has taught me some of the most important things to be learn in life. Beyond making dinner suggestions incredibly easy _good pizza will ALWAYS make that list_, I was fortunate enough to gain some foundational business experience having managed a local pizza shop in cozy St. Cloud MN as a teen. 
 
 <img src="https://s3-media4.fl.yelpcdn.com/bphoto/f8yLBjYmCwiB3BnfYh8d-g/o.jpg" alt="Lombardi's">
 
