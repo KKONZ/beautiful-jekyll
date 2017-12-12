@@ -29,21 +29,17 @@ All of the natural language processing has thus far been achieved using the pyth
 
 ### Modeling the Data
 
-The first step in modeling the data was to use the package Gensim to represent the words in a highly dimensional vector space to create a continuous bag of words word2vec model. This uses a discriminate approach using a binary logistic regression classification object for target words, 
-<math xmlns="http://www.w3.org/1998/Math/MathML">
+The first step in modeling the data was to use the package Gensim to represent the words in a highly dimensional vector space to create a continuous bag of words word2vec model. This uses a discriminate approach using a binary logistic regression classification object for target words, <math xmlns="http://www.w3.org/1998/Math/MathML">
   <msub>
     <mi>w</mi>
     <mi>t</mi>
   </msub>
-</math>
-and 
-<math xmlns="http://www.w3.org/1998/Math/MathML">
+</math> and <math xmlns="http://www.w3.org/1998/Math/MathML">
   <msub>
     <mi>w</mi>
     <mi>t</mi>
   </msub>
-</math>
-imaginary words.
+</math> imaginary words.
 
 <img src="https://www.tensorflow.org/images/nce-nplm.png" alt="CBOW">
 
