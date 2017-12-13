@@ -129,14 +129,14 @@ Next we use a dimension reduction technique called t distributed neighbor embedd
 <img src= "https://wikimedia.org/api/rest_v1/media/math/render/svg/2cc3ef3b4d237787cd82e5ef638d96d642a1e43d" alt="hd">
 
 The proportion of the probabilty follows a Gaussian normal distribution for the probability of 
-<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/57d2ef3df60acdb53bdf90535264041fea7231cd" alt= "xi"> and <img sr c= "https://wikimedia.org/api/rest_v1/media/math/render/svg/da7e57d3f8c537992b45488f9586aec0c35a85f0" alt="xj"> for high dimensionality space. 
+<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/57d2ef3df60acdb53bdf90535264041fea7231cd" alt= "xi"> and <img src= "https://wikimedia.org/api/rest_v1/media/math/render/svg/da7e57d3f8c537992b45488f9586aec0c35a85f0" alt="xj"> for high dimensionality space. 
 
 For low dimenionality, the conditional probabilty is mathematically represented below:
 
 
 <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/332b46963d03a1fa12b1d6524652c43efc60930e" alt = "ld">
 
-Finally we need to address the variance, which is the <img src ="https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2017/01/18122537/x3.png" alt = "sigma"> of the students t-test for each high dimensional datapoint. For a dense region, a lower sigma value is optimal, and vice versa for lower density regions. Perplexity is defined mathematically below:
+Finally we will look at Perplexity, which is defined mathematically below:
 
 
 <img src = "https://wikimedia.org/api/rest_v1/media/math/render/svg/ea6c33b4a7fadef9d5ec0857a4dda1ede2a4d27b" alt = "ShannonEntropy">
