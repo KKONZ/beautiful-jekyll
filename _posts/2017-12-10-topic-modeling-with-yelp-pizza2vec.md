@@ -128,7 +128,8 @@ Next we use a dimension reduction technique called t distributed neighbor embedd
 
 <img src= "https://wikimedia.org/api/rest_v1/media/math/render/svg/2cc3ef3b4d237787cd82e5ef638d96d642a1e43d" alt="hd">
 
-The proportion of the probabilty follows a Gaussian normal distribution for the probability of <img scr="https://wikimedia.org/api/rest_v1/media/math/render/svg/57d2ef3df60acdb53bdf90535264041fea7231cd" alt="xi"> and <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/da7e57d3f8c537992b45488f9586aec0c35a85f0" alt="xj"> for high dimensionality space. 
+The proportion of the probabilty follows a Gaussian normal distribution for the probability of 
+<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/57d2ef3df60acdb53bdf90535264041fea7231cd" alt= "xi"> and <img sr c= "https://wikimedia.org/api/rest_v1/media/math/render/svg/da7e57d3f8c537992b45488f9586aec0c35a85f0" alt="xj"> for high dimensionality space. 
 
 For low dimenionality, the conditional probabilty is mathematically represented below:
 
