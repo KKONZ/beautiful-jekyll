@@ -31,7 +31,7 @@ All of the natural language processing has thus far been achieved using the pyth
 
 ### Word2vec
 
-The first step in modeling the data was to use the package Gensim to represent the words in a highly dimensional vector space to create a continuous bag of words word2vec model. This uses a discriminate approach using a binary logistic regression classification object for target words, __<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>w</mi><mi>t</mi></msub></math>__, and <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math> imaginary words <math xmlns="http://www.w3.org/1998/Math/MathML"><mover><mi>w</mi><mo stretchy="false">&#x007E;<!-- ~ --></mo></mover></math>
+The first step in modeling the data was to use the package Gensim to represent the words in a highly dimensional vector space to create a continuous bag of words word2vec model. This uses a discriminate approach using a binary logistic regression classification object for target words, <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="bold">w</mi><mi mathvariant="bold">t</mi></msub></math>, and <math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="bold">k</mi></math> imaginary words <math xmlns="http://www.w3.org/1998/Math/MathML"><mover><mi mathvariant="bold">w</mi><mo stretchy="false">&#x007E;<!-- ~ --></mo></mover></math>
 
 Below is an illustration of what is happening in continuous bag of word modeling. 
 
@@ -42,32 +42,32 @@ This maximization objective is represented mathematically below
 
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
   <msub>
-    <mi>J</mi>
-    <mtext>NEG</mtext>
+    <mi mathvariant="bold">J</mi>
+    <mtext mathvariant="bold">NEG</mtext>
   </msub>
-  <mo>=</mo>
-  <mi>log</mi>
-  <mo>&#x2061;<!-- ⁡ --></mo>
+  <mo mathvariant="bold">=</mo>
+  <mi mathvariant="bold">log</mi>
+  <mo mathvariant="bold">&#x2061;<!-- ⁡ --></mo>
   <msub>
-    <mi>Q</mi>
-    <mi>&#x03B8;<!-- θ --></mi>
+    <mi mathvariant="bold">Q</mi>
+    <mi mathvariant="bold">&#x03B8;<!-- θ --></mi>
   </msub>
   <mo stretchy="false">(</mo>
-  <mi>D</mi>
-  <mo>=</mo>
-  <mn>1</mn>
+  <mi mathvariant="bold">D</mi>
+  <mo mathvariant="bold">=</mo>
+  <mn mathvariant="bold">1</mn>
   <mrow class="MJX-TeXAtom-ORD">
     <mo stretchy="false">|</mo>
   </mrow>
   <msub>
-    <mi>w</mi>
-    <mi>t</mi>
+    <mi mathvariant="bold">w</mi>
+    <mi mathvariant="bold">t</mi>
   </msub>
-  <mo>,</mo>
-  <mi>h</mi>
+  <mo mathvariant="bold">,</mo>
+  <mi mathvariant="bold">h</mi>
   <mo stretchy="false">)</mo>
-  <mo>+</mo>
-  <mi>k</mi>
+  <mo mathvariant="bold">+</mo>
+  <mi mathvariant="bold">k</mi>
   <munder>
     <mrow class="MJX-TeXAtom-OP">
       <mrow class="MJX-TeXAtom-ORD">
@@ -77,47 +77,47 @@ This maximization objective is represented mathematically below
     <mrow class="MJX-TeXAtom-ORD">
       <mrow class="MJX-TeXAtom-ORD">
         <mover>
-          <mi>w</mi>
+          <mi mathvariant="bold">w</mi>
           <mo stretchy="false">&#x007E;<!-- ~ --></mo>
         </mover>
       </mrow>
-      <mo>&#x223C;<!-- ∼ --></mo>
+      <mo mathvariant="bold">&#x223C;<!-- ∼ --></mo>
       <msub>
-        <mi>P</mi>
-        <mtext>noise</mtext>
+        <mi mathvariant="bold">P</mi>
+        <mtext mathvariant="bold">noise</mtext>
       </msub>
     </mrow>
   </munder>
-  <mo>&#x2061;<!-- ⁡ --></mo>
+  <mo mathvariant="bold">&#x2061;<!-- ⁡ --></mo>
   <mrow>
-    <mo>[</mo>
-    <mi>log</mi>
-    <mo>&#x2061;<!-- ⁡ --></mo>
+    <mo mathvariant="bold">[</mo>
+    <mi mathvariant="bold">log</mi>
+    <mo mathvariant="bold">&#x2061;<!-- ⁡ --></mo>
     <msub>
-      <mi>Q</mi>
-      <mi>&#x03B8;<!-- θ --></mi>
+      <mi mathvariant="bold">Q</mi>
+      <mi mathvariant="bold">&#x03B8;<!-- θ --></mi>
     </msub>
     <mo stretchy="false">(</mo>
-    <mi>D</mi>
-    <mo>=</mo>
-    <mn>0</mn>
+    <mi mathvariant="bold">D</mi>
+    <mo mathvariant="bold">=</mo>
+    <mn mathvariant="bold">0</mn>
     <mrow class="MJX-TeXAtom-ORD">
       <mo stretchy="false">|</mo>
     </mrow>
     <mrow class="MJX-TeXAtom-ORD">
       <mover>
-        <mi>w</mi>
-        <mo stretchy="false">&#x007E;<!-- ~ --></mo>
+        <mi mathvariant="bold">w</mi>
+        <mo stretchy="false" mathvariant="bold">&#x007E;<!-- ~ --></mo>
       </mover>
     </mrow>
-    <mo>,</mo>
-    <mi>h</mi>
+    <mo mathvariant="bold">,</mo>
+    <mi mathvariant="bold">h</mi>
     <mo stretchy="false">)</mo>
-    <mo>]</mo>
+    <mo mathvariant="bold">]</mo>
   </mrow>
 </math>
 
-where <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>Q</mi><mi>&#x03B8;<!-- θ --></mi></msub><mo stretchy="false">(</mo><mi>D</mi><mo>=</mo><mn>1</mn><mo stretchy="false">|</mo><mi>w</mi><mo>,</mo><mi>h</mi><mo stretchy="false">)</mo></math> is binary logistic regression probabilty of seeing <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>w</mi></math> in context <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>h</mi></math> of dataset <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>D</mi></math> in embedded learned vectors <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>&#x03B8;<!-- θ --></mi></math> where <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math>.
+where <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="bold">Q</mi><mi mathvariant="bold">&#x03B8;<!-- θ --></mi></msub><mo stretchy="false" mathvariant="bold">(</mo><mi mathvariant="bold">D</mi><mo mathvariant="bold">=</mo><mn mathvariant="bold">1</mn><mo stretchy="false" mathvariant="bold">|</mo><mi mathvariant="bold">w</mi><mo mathvariant="bold">,</mo><mi mathvariant="bold">h</mi><mo stretchy="false" mathvariant="bold">)</mo></math> is binary logistic regression probabilty of seeing <math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="bold">w</mi></math> in context <math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="bold">h</mi></math> of dataset <math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="bold">D</mi></math> in embedded learned vectors <math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="bold">&#x03B8;<!-- θ --></mi></math> where <math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="bold">k</mi></math>.
 
 The images and mathML code were borrowed from [Tensorflow]("https://www.tensorflow.org/tutorials/word2vec").
 Tensorflow has awesome documentation, go there and or their github repositories to learn more.
