@@ -135,7 +135,7 @@ For low dimenionality, the conditional probabilty is mathematically represented 
 
 <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/332b46963d03a1fa12b1d6524652c43efc60930e" alt = "ld">
 
-Finally we need to address the variance, which is the <img src ="https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2017/01/18122537/x3.png" alt = "sigma"> of the students t-test for each high dimensional datapoint. For a dense region, a lower sigma value is optimal, and vice versa for lower density regions. Perplexity is produced by means of increased entropy as <img src="https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2017/01/18122537/x3.png" alt ="sigma">, defined mathematically below:
+Finally we need to address the variance, which is the <img src ="https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2017/01/18122537/x3.png" alt = "sigma"> of the students t-test for each high dimensional datapoint. For a dense region, a lower sigma value is optimal, and vice versa for lower density regions. Perplexity is defined mathematically below:
 
 
 <img src = "https://wikimedia.org/api/rest_v1/media/math/render/svg/ea6c33b4a7fadef9d5ec0857a4dda1ede2a4d27b" alt = "ShannonEntropy">
