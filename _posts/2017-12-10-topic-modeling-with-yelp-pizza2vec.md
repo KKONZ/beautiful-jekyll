@@ -142,7 +142,7 @@ Finally we will look at Perplexity, which is defined mathematically below:
 <img src = "https://wikimedia.org/api/rest_v1/media/math/render/svg/ea6c33b4a7fadef9d5ec0857a4dda1ede2a4d27b" alt = "Perplexity">
 
 Perplexity can be thought of as a high dimensionality smoothing mechanisim. 
-
+The images above were borrowed from the t-sne and perplexity wikipedia pages.
 
 ### Clustering 
 
