@@ -20,7 +20,15 @@ It turns out Yelp offers a _slice_ of their data for academic purposes as well a
 The data that was used for the post can be downloaded from the following URL [Yelp Dataset](https://www.yelp.com/dataset/challenge "10th Iteration Data"). The data is available in both SQL and JSON, I chose to download the JSON version and read the data into python with JSON package I used codecs to iterate through the json files and write to txt files. Instead of topic modeling on the entire roughly 3 million review restaurants, I chose instead to subset to reviews that contained the word pizza. There is a phenomenal pycon presentation from Patrick Harrison on modern natural language processing which uses a similar approach to this. I highly recomend watching that video if you are intersted in learning more about what is going on behind the hood for common natural language processing transformations. A general snippet for reading the business and review data files is shown below.
 
 ```python
+import os
+import codecs
 
+dir = os.path.join('..', 'data')
+
+filepath = os.path.join(dir,'business.json')
+
+with codecs.open(filepath, encoding='utf_8') as f:
+    f.readline() 
 ```
 
 ### Preparing the text for modeling
