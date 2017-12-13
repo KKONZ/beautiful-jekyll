@@ -126,16 +126,20 @@ Tensorflow has awesome documentation, go there and or their github repositories 
 
 Next we use a dimension reduction technique called t distributed neighbor embedding, t-sne. This reduced the dimensional space to an x and a y coordinate and similar topic words will be clustered together. Unlike PCA dimension reduction, t-sne is based on probability distributions with random walk on neighborhood graphs to retain both the local and global structrues in the data. The first step is to convert the high-dimensional Euclidean distances to conditional probabilities showing similarities see the mathematical representation below:
 
-<img src= "https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2017/01/17113403/TSN1.png alt="hd">
+<img src= "https://wikimedia.org/api/rest_v1/media/math/render/svg/2cc3ef3b4d237787cd82e5ef638d96d642a1e43d" alt="hd">
 
-The proportion of the probabilty follows a Gaussian normal distribution for the probability of <img scr="https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2017/01/21070012/xi.png" alt="xi"> and <img src="https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2017/01/21064623/xj.png" alt="xj"> for high dimensionality space. 
+The proportion of the probabilty follows a Gaussian normal distribution for the probability of <img scr="https://wikimedia.org/api/rest_v1/media/math/render/svg/57d2ef3df60acdb53bdf90535264041fea7231cd" alt="xi"> and <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/da7e57d3f8c537992b45488f9586aec0c35a85f0" alt="xj"> for high dimensionality space. 
 
 For low dimenionality, the conditional probabilty is mathematically represented below:
 
 
-<img src="https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2017/01/17113456/TSN2.png" alt = "ld">
+<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/332b46963d03a1fa12b1d6524652c43efc60930e" alt = "ld">
 
 Finally we need to address the variance, which is the <img src ="https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2017/01/18122537/x3.png" alt = "sigma"> of the students t-test for each high dimensional datapoint. For a dense region, a lower sigma value is optimal, and vice versa for lower density regions. Perplexity is produced by means of increased entropy as <img src="https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2017/01/18122537/x3.png" alt ="sigma">, defined mathematically below:
+
+Perp(Pi) = 2H(Pi)
+
+
 
 <img src = "https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2017/01/17113730/TSN3.png" alt= "Perplexity">
 
