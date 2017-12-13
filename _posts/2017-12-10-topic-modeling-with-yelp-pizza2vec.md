@@ -31,7 +31,7 @@ All of the natural language processing has thus far been achieved using the pyth
 
 ### Word2vec
 
-The first step in modeling the data was to use the package Gensim to represent the words in a highly dimensional vector space to create a continuous bag of words word2vec model. This uses a discriminate approach using a binary logistic regression classification object for target words, <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>w</mi><mi>t</mi></msub></math>, and <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math> imaginary words <math xmlns="http://www.w3.org/1998/Math/MathML"><mover><mi>w</mi><mo stretchy="false">&#x007E;<!-- ~ --></mo></mover></math>
+The first step in modeling the data was to use the package Gensim to represent the words in a highly dimensional vector space to create a continuous bag of words word2vec model. This uses a discriminate approach using a binary logistic regression classification object for target words, __<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>w</mi><mi>t</mi></msub></math>__, and <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math> imaginary words <math xmlns="http://www.w3.org/1998/Math/MathML"><mover><mi>w</mi><mo stretchy="false">&#x007E;<!-- ~ --></mo></mover></math>
 
 Below is an illustration of what is happening in continuous bag of word modeling. 
 
@@ -139,7 +139,7 @@ For low dimenionality, the conditional probabilty is mathematically represented 
 Finally we will look at Perplexity, which is defined mathematically below:
 
 
-<img src = "https://wikimedia.org/api/rest_v1/media/math/render/svg/ea6c33b4a7fadef9d5ec0857a4dda1ede2a4d27b" alt = "ShannonEntropy">
+<img src = "https://wikimedia.org/api/rest_v1/media/math/render/svg/ea6c33b4a7fadef9d5ec0857a4dda1ede2a4d27b" alt = "Perplexity">
 
 Perplexity can be thought of as a high dimensionality smoothing mechanisim. 
 
@@ -167,10 +167,6 @@ Going a bit deeper, spectral clustering varies from kmeans in how the distances 
 
 The interactive plot below was created in Bokeh, in order to get the plot to have all the functionality I wanted, the size of the html code ended up being really huge. In order to optimze the performance, I used WebGL back which can be enabled in one line of code.
 
-```python
-p = figure(...
-		output_backend = "webgl"
-        ...)
 ```
 The full code is available in my repository KKONZ/Springboard/Capstone%202
 
