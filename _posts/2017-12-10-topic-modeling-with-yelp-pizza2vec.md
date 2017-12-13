@@ -136,13 +136,52 @@ For low dimenionality, the conditional probabilty is mathematically represented 
 
 <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/332b46963d03a1fa12b1d6524652c43efc60930e" alt = "ld">
 
-Finally we will look at Perplexity, which is defined mathematically below:
+Finally we will look at Perplexity, which is defined mathematically below as 2 raised to the Shannon entropy value below:
 
 
-<img src = "https://wikimedia.org/api/rest_v1/media/math/render/svg/ea6c33b4a7fadef9d5ec0857a4dda1ede2a4d27b" alt = "Perplexity">
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi mathvariant="bold">H</mi>
+  <mo stretchy="false">(</mo>
+  <msub>
+    <mi mathvariant="bold">P</mi>
+    <mi mathvariant="bold">i</mi>
+  </msub>
+  <mo stretchy="false" mathvariant="bold">)</mo>
+  <mo mathvariant="bold">=</mo>
+  <mo mathvariant="bold">&#x2212;<!-- − --></mo>
+  <munder>
+    <mo mathvariant="bold">&#x2211;<!-- ∑ --></mo>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mi mathvariant="bold">j</mi>
+    </mrow>
+  </munder>
+  <msub>
+    <mi mathvariant="bold">P</mi>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mi mathvariant="bold">j</mi>
+      <mo fence="false" stretchy="false" mathvariant="bold">&#x007C;<!-- | --></mo>
+      <mi mathvariant="bold">i</mi>
+    </mrow>
+  </msub>
+  <msub>
+    <mi mathvariant="bold">log</mi>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mn mathvariant="bold">2</mn>
+    </mrow>
+  </msub>
+  <mo mathvariant="bold">&#x2061;<!-- ⁡ --></mo>
+  <msub>
+    <mi mathvariant="bold">P</mi>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mi mathvariant="bold">j</mi>
+      <mo fence="false" stretchy="false">&#x007C;<!-- | --></mo>
+      <mi mathvariant="bold">i</mi>
+    </mrow>
+  </msub>
+</math>
 
 Perplexity can be thought of as a high dimensionality smoothing mechanisim. 
-The images above were borrowed from the t-sne and perplexity wikipedia pages.
+The images above were borrowed from the t-sne wikipedia pages and this [blog]("http://jdetle.com/2016/08/17/tSNE-part2/")
 
 ### Clustering 
 
