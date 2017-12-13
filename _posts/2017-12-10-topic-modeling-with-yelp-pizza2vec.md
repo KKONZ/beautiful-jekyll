@@ -137,15 +137,8 @@ For low dimenionality, the conditional probabilty is mathematically represented 
 
 Finally we need to address the variance, which is the <img src ="https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2017/01/18122537/x3.png" alt = "sigma"> of the students t-test for each high dimensional datapoint. For a dense region, a lower sigma value is optimal, and vice versa for lower density regions. Perplexity is produced by means of increased entropy as <img src="https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2017/01/18122537/x3.png" alt ="sigma">, defined mathematically below:
 
-Perp(Pi) = 2H(Pi)
 
-
-
-<img src = "https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2017/01/17113730/TSN3.png" alt= "Perplexity">
-
-and H(<img src="https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2017/01/18130133/x6.png" alt="Perplexity">) is the Shannon entropy of <img src="https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2017/01/18130133/x6.png" alt="Perplexity"> in bits :
-
-<img src = "https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2017/01/17113922/TSN4.png" alt = "ShannonEntropy">
+<img src = "https://wikimedia.org/api/rest_v1/media/math/render/svg/ea6c33b4a7fadef9d5ec0857a4dda1ede2a4d27b" alt = "ShannonEntropy">
 
 Perplexity can be thought of as a high dimensionality smoothing mechanisim. 
 
