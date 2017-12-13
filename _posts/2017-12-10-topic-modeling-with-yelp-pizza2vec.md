@@ -117,15 +117,33 @@ This maximization objective is represented mathematically below
   </mrow>
 </math>
 
-where <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>Q</mi><mi>&#x03B8;<!-- θ --></mi></msub><mo stretchy="false">(</mo><mi>D</mi><mo>=</mo><mn>1</mn><mo stretchy="false">|</mo><mi>w</mi><mo>,</mo><mi>h</mi><mo stretchy="false">)</mo></math> is binary logistic regression probabilty of seeing <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>w</mi></math> in context <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>h</mi></math> of dataset <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>D</mi></math> in embedded learned vectors <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>&#x03B8;<!-- θ --></mi></math> where <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math> contrastive words are approximated from the [Monte Carlo average]("https://en.wikipedia.org/wiki/Monte_Carlo_integration") computed noise distribution.
+where <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>Q</mi><mi>&#x03B8;<!-- θ --></mi></msub><mo stretchy="false">(</mo><mi>D</mi><mo>=</mo><mn>1</mn><mo stretchy="false">|</mo><mi>w</mi><mo>,</mo><mi>h</mi><mo stretchy="false">)</mo></math> is binary logistic regression probabilty of seeing <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>w</mi></math> in context <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>h</mi></math> of dataset <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>D</mi></math> in embedded learned vectors <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>&#x03B8;<!-- θ --></mi></math> where <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>k</mi></math>.
 
-The images and mathML code were borrowed from https://www.tensorflow.org/tutorials/word2vec.
+The images and mathML code were borrowed from [Tensorflow]("https://www.tensorflow.org/tutorials/word2vec").
 Tensorflow has awesome documentation, go there and or their github repositories to learn more.
 
 ### t-sne
 
-Next we use a dimension reduction technique called t distributed neighbor embedding, t-sne. This reduced the dimensional space to an x and a y coordinate and similar topic words will be clustered together. 
+Next we use a dimension reduction technique called t distributed neighbor embedding, t-sne. This reduced the dimensional space to an x and a y coordinate and similar topic words will be clustered together. Unlike PCA dimension reduction, t-sne is based on probability distributions with random walk on neighborhood graphs to retain both the local and global structrues in the data. The first step is to convert the high-dimensional Euclidean distances to conditional probabilities showing similarities see the mathematical representation below:
 
+<img src= "https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2017/01/17113403/TSN1.png alt="hd">
+
+The proportion of the probabilty follows a Gaussian normal distribution for the probability of <img scr="https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2017/01/21070012/xi.png" alt="xi"> and <img src="https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2017/01/21064623/xj.png" alt="xj"> for high dimensionality space. 
+
+For low dimenionality, the conditional probabilty is mathematically represented below:
+
+
+<img src="https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2017/01/17113456/TSN2.png" alt = "ld">
+
+Finally we need to address the variance, which is the <img src ="https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2017/01/18122537/x3.png" alt = "sigma"> of the students t-test for each high dimensional datapoint. For a dense region, a lower sigma value is optimal, and vice versa for lower density regions. Perplexity is produced by means of increased entropy as <img src="https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2017/01/18122537/x3.png" alt "sigma">, defined mathematically below:
+
+<img src = "https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2017/01/17113730/TSN3.png" alt "Perplexity">
+
+and H(<img src="https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2017/01/18130133/x6.png" alt="Perplexity">) is the Shannon entropy of <img src="https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2017/01/18130133/x6.png" alt="Perplexity"> in bits :
+
+<img src = "https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2017/01/17113922/TSN4.png" alt = "ShannonEntropy">
+
+Perplexity can be thought of as a high dimensionality smoothing mechanisim. 
 
 
 ### Clustering 
