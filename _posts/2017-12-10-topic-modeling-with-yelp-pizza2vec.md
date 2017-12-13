@@ -71,7 +71,7 @@ This maximization objective is represented mathematically below
   <munder>
     <mrow class="MJX-TeXAtom-OP">
       <mrow class="MJX-TeXAtom-ORD">
-        <mi mathvariant="double-struck">E</mi>
+        <mi mathvariant="double-struck" mathvariant="bold">E</mi>
       </mrow>
     </mrow>
     <mrow class="MJX-TeXAtom-ORD">
@@ -97,7 +97,7 @@ This maximization objective is represented mathematically below
       <mi mathvariant="bold">Q</mi>
       <mi mathvariant="bold">&#x03B8;<!-- θ --></mi>
     </msub>
-    <mo stretchy="false">(</mo>
+    <mo stretchy="false" mathvariant="bold">(</mo>
     <mi mathvariant="bold">D</mi>
     <mo mathvariant="bold">=</mo>
     <mn mathvariant="bold">0</mn>
