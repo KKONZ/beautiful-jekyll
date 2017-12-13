@@ -162,12 +162,8 @@ sc = SpectralClustering(affinity = 'nearest_neighbors', assign_labels = 'kmeans'
 Going a bit deeper, spectral clustering varies from kmeans in how the distances are computed. Geometrically speaking, Kmeans uses the distance between points where as Spectral Clustering uses the graph distance, in this case nearest-neighbor. In addition I specified kmeans label as opposed discrete, this allows for finer granularity of clustering, it can prove to be unstable and unreproducible but seems to work remarkably well for this problem.
 
 
-
-
-
 The interactive plot below was created in Bokeh, in order to get the plot to have all the functionality I wanted, the size of the html code ended up being really huge. In order to optimze the performance, I used WebGL back which can be enabled in one line of code.
 
-```
 The full code is available in my repository KKONZ/Springboard/Capstone%202
 
 
