@@ -65,9 +65,11 @@ tf.one_hot(indices, depth,
 ```
 
 This model follows metadata sequences in which the conditional probability distribution is defined below:
+
 {pi,t(Vit|V\i,t,M, θi,t)} i∈[4],t∈[T]
 
 Vit indicates the voice i at time index t and V\i,t are all variables in V except for the variable Vit. So that the time can be invariant so that sequences of any size can be used, the parameters are shared between all conditional probability distributions in the same voice:
+
 θi:= θi,t, pi:= pi,t ∀t ∈ [T].
 
 Then each of the conditional probability distributions are fit to the data by maximizing the log-likigood. This results in four classification problems represented mathematically below:
