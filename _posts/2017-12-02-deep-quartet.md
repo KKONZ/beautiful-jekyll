@@ -87,7 +87,7 @@ Generation in the depedency networks is done by utlizing pseudo-gibbs sampling, 
 The results from this modeling technique seem to speak for themselves. See the results of the “Bach or Computer” experiment below. The figure shows the distribution of the votes between “Computer” (bluebars) and “Bach” (red bars) for each model and each level of expertiseof the voters (from 1 to 3). The J.S.Bach field are actual Bach compositions and MLP stands for a multi-layer perceptron and MaxEnt stands for Maximum Entropy
 
 
-![alt text](/img/DeepBachBench.jpg "Deep Bach Bench")
+![alt text](/img/DeepBachBench.JPG "Deep Bach Bench")
 
 I had issues running the source code on my windows machine and ended up having to just hard code the pickled data set path and name instead of using the os python package. The code I used to actually train the AI music embedded below is available [KKONZ deepBach](https://github.com/KKONZ/DeepBach). My version has the custom dataset pickle file location hardcoded as I couldn't get the Sony version to work for that.  If you are using a windows or a linux machine the code below should work for you.
 An easy way of running this code is to launch an Azure Deep Learning VM, clone the repo, and start training away! I have had issues running the code and chose to hard code the pickle path for custom datasets in my version of the repo.
