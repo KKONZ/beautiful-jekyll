@@ -15,7 +15,7 @@ Prior to becoming a data scientist, I was lucky enough to study in one of the fi
 
 ***For this post I will explore the limits of the [deepBach](https://arxiv.org/abs/1612.01010) modeling approach to generate music with deep neural networks.***
 
-The code is open sourced and can be found under [SONY deepBach](https://github.com/Ghadjeres/DeepBach), the Bach chorale corpus for that research is readily availble in the music21 package. I wanted to explore expanding the corpus to include compositions from after the baroque peroid as well. One of the constraints of this modeling techinque is that there has to be the same number of voices for each training composition. The Bach files used for the initial research have four voices so I decided to add string quartets from the classical, romantic, and nationalist periods as they have the same number of voices.
+The code is open sourced and can be found under [SONY deepBach](https://github.com/Ghadjeres/DeepBach), the Bach chorale corpus for that research is readily availble in the music21 package. I wanted to explore expanding the corpus to include compositions from after the baroque peroid as well. One of the constraints of this modeling techinque is that there has to be the same number of voices for each training composition. The Bach files used for the initial research have four part harmonies so I decided to add string quartets from the classical, romantic, and nationalist periods as they have the same number of voices.
 
 ## Additional data, string quartets
 
@@ -164,4 +164,4 @@ Going to California:
 
 
 ## Conclusions:
-When choosing a file to reharmonize, it seemed that  files where all of the voices are moving train more compelling output than when the voices more or less just outline the harmonic changes in block chords. Overall I was happy with the output from this modeling technique and this has been an incredibly rewarding project to work on.
+When choosing a file to reharmonize, it seemed that  files where all of the voices are moving train more compelling output than when the voices more or less just outline the harmonic changes in block chords. Overall I was happy with the output from this modeling technique and this has been an incredibly rewarding project to work on. 
