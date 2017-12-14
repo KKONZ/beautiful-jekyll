@@ -11,7 +11,7 @@ title: Deep Quartet
 
 
 
-Prior to becoming a data scientist, I was lucky enough to study in one of the finest graduate orchestral percussion programs in the world. Most of my classmates during that time now have big orchestra jobs such as the Metropolitan opera and the Oregon Symphony. The program was very structured and formulaic. I am convinced that having studied under Tom Freer laid the foundation for me to have the capacity to do well in data science. So, thank you Tom! Whenever I get a chance I love to work on a music data modeling project, but this is the most ambition project I have tried yet and has also turned out to be the most rewarding.
+Prior to becoming a data scientist, I was lucky enough to study in one of the finest graduate orchestral percussion programs in the world. Most of my classmates during that time now have big orchestra jobs such as the Metropolitan opera and the Oregon Symphony. The program was very structured and formulaic. I am convinced that having studied under Tom Freer laid the foundation for me to have the capacity to do well in data science. So, thank you Tom! Whenever I get a chance, I love to work on a music data modeling project. This is the most ambition project I have tried yet and has also turned out to be the most rewarding.
 
 ***For this post I will explore the limits of the [deepBach](https://arxiv.org/abs/1612.01010) modeling approach to generate music with deep neural networks.***
 
@@ -26,6 +26,9 @@ In addition to the roughly 350 Bach chorale files from the original research, I 
 
 
 <img src="/img/Strings__Notes.svg" alt="StringNotes" />
+
+
+I put in fairly exhaustive efforts somehow balance the midi files since there were fewer of those compositions but their size was on average so much bigger than the chorale files. I wanted to start by taking each of the string quartet files and chopping them up into 20 measure sequences. This lended itself to hours and hours which turned into months of banging my head against the wall. I ended up pushing a couple contriubtions to the MIT maintained package music21 but was experiencing a lot of issues. Mainly that notes with complex subdivisions would end up ringing forever when writing the music 'streams' to midi and by the end of the sequences there would often be 5-10 notes with endless durations making for a dissonant and noisy files. I also tried using pretty-midi which appeared to note produce any noticeable issues with note complexity but was evidentally producing a number of files that would cause errors for some reason mid-train. I successfully trained over 100 of the chopped files but ended up abandoning that approach because the cleaning process was creating issues and the test accuracy was also not very good with this approach compared to using the full files.
 
 
 # Training the model
