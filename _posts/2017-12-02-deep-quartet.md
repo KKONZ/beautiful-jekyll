@@ -91,11 +91,7 @@ The results from this modeling technique seem to speak for themselves. See the r
 
 ![alt text](/img/DeepBachBench.JPG "Deep Bach Bench")
 
-I had issues running the source code on my windows machine and ended up having to just hard code the pickled data set path and name instead of using the os python package. The code I used to actually train the AI music embedded below is available [KKONZ deepBach](https://github.com/KKONZ/DeepBach). My version has the custom dataset pickle file location hardcoded as I couldn't get the Sony version to work for that.  If you are using a windows or a linux machine the code below should work for you.
-An easy way of running this code is to launch an Azure Deep Learning VM, clone the repo, and start training away! I have had issues running the code and chose to hard code the pickle path for custom datasets in my version of the repo.
-Regardless of the platform you choose to use if interested in running this code, you can clone the project while it is on my github page. Note that this version does not use Keras 2 yet.
-
-After cloning the github repository you will also need to download a couple libraries
+I had issues running the source code on my windows machine and ended up having to just hard code the pickled data set path and name instead of using the os python package. The code I used to actually train the AI music embedded below is available [KKONZ deepBach](https://github.com/KKONZ/DeepBach). I ran the code on an Azure Deep Learning VM with NVIDIA GPUs to shorten the training time. Note that this version does not use Keras 2 yet. After cloning the github repository you will also need to download a couple libraries
 [music21](http://web.mit.edu/music21/) and [tqdm](https://pypi.python.org/pypi/tqdm):
 
 ```python
@@ -104,7 +100,7 @@ pip install music21
 pip install tqdm
 ```
 
-Then using the following parameters, you can adjust the following out of the box. To adjust optimizer settings you will need to do so in the deepBach.py file.
+Then using the following parameters, you can adjust the following parameters and start modeling right out of the box. To adjust optimizer settings you will need to do so in the deepBach.py file.
 
 ```
 usage: deepBach.py [-h] [--timesteps TIMESTEPS] [-b BATCH_SIZE_TRAIN]
