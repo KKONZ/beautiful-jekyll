@@ -74,7 +74,7 @@ Then each of the conditional probability distributions are fit to the data by ma
 
 maxθiXtlog pi(Vti|V\i,t,M, θi), for i ∈ [4], 
 
-This in effect predicts a note knowing the value of its neighboring notes. Each classifier is fit using four neural networks. Two of which are deep neural networks, one dedicated to summing past information and the other summing future information in conjunction with a non-recurrent NN for notes occuring at the same time. The output from the last recurrent neural network is preserved and the three outputs are merged and used in the fourth neural network with output:
+This in effect predicts a note, based off of the value of its neighboring notes. Each classifier is fit using four neural networks. Two of which are deep neural networks, one dedicated to summing past information and the other summing future information in conjunction with a non-recurrent NN for notes occuring at the same time. The output from the last recurrent neural network is preserved and the three outputs are merged and used in the fourth neural network with output:
 
 pi(Vti|V\i,t,M, θ)
 
@@ -82,6 +82,12 @@ The illustration below shows the stacked models described above:
 
 ![alt text](/img/LSTMref.JPG "Model reference")
 
+Generation in the depedency networks is done by utlizing pseudo-gibbs sampling, where the conditional distributions are potentially incompatible and that the conditional distributions are not neccesssairly from a joint distribution p(V). This Markov chain does converge to another stationary distribution and applications on real data demonstrated this method yeilded accurate joint probabilities.
+
+The results from this modeling technique seem to speak for themselves. See the results of the “Bach or Computer” experiment below. The figure shows the distribution of the votes between “Computer” (bluebars) and “Bach” (red bars) for each model and each level of expertiseof the voters (from 1 to 3). The J.S.Bach field are actual Bach compositions and MLP stands for a multi-layer perceptron and MaxEnt stands for Maximum Entropy
+
+
+![alt text](/img/DeepBachBench.jpg "Deep Bach Bench")
 
 I had issues running the source code on my windows machine and ended up having to just hard code the pickled data set path and name instead of using the os python package. The code I used to actually train the AI music embedded below is available [KKONZ deepBach](https://github.com/KKONZ/DeepBach). My version has the custom dataset pickle file location hardcoded as I couldn't get the Sony version to work for that.  If you are using a windows or a linux machine the code below should work for you.
 An easy way of running this code is to launch an Azure Deep Learning VM, clone the repo, and start training away! I have had issues running the code and chose to hard code the pickle path for custom datasets in my version of the repo.
