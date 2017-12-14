@@ -11,7 +11,7 @@ title: Deep Quartet
 
 
 
-Prior to becoming a data scientist, I was lucky enough to study in one of the finest graduate orchestral percussion programs in the world. Most of my classmates during that time now have big orchestra jobs such as the Metropolitan opera and the Oregon Symphony. The program was very structured and formulaic. Very much like the Steve Jobs quote that everyone should learn computer programming or law because it teaches you how to think, this program seemed to fall into that category for me. I am convinced that having studied under Tom Freer laid the foundation for me to have the capacity to do well in data science.
+Prior to becoming a data scientist, I was lucky enough to study in one of the finest graduate orchestral percussion programs in the world. Most of my classmates during that time now have big orchestra jobs such as the Metropolitan opera and the Oregon Symphony. The program was very structured and formulaic. There is a Steve Jobs quote that I really like along the lines of _everyone should learn computer programming or law because it teaches you how to think_, the grad percussion program at CSU definitely seemed to have a similar effect for me. I am convinced that having studied under Tom Freer laid the foundation for me to have the capacity to do well in data science. So, thank you Tom! Whenever I get a chance I love to work on a music data modeling project, but this is the most ambition project I have tried yet.
 
 ***For this post I will explore the limits of the [deepBach](https://arxiv.org/abs/1612.01010) modeling approach to generate music with deep neural networks.***
 
