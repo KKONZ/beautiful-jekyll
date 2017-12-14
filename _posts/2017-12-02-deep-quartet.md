@@ -11,7 +11,7 @@ title: Deep Quartet
 
 
 
-Prior to becoming a data scientist, I was lucky enough to study in one of the finest graduate orchestral percussion programs in the world. Most of my classmates during that time now have big orchestra jobs such as the Metropolitan opera and the Oregon Symphony. The program was very structured and formulaic. There is a Steve Jobs quote that I really like along the lines of _everyone should learn computer programming or law because it teaches you how to think_, the grad percussion program at CSU definitely seemed to have a similar effect for me. I am convinced that having studied under Tom Freer laid the foundation for me to have the capacity to do well in data science. So, thank you Tom! Whenever I get a chance I love to work on a music data modeling project, but this is the most ambition project I have tried yet.
+Prior to becoming a data scientist, I was lucky enough to study in one of the finest graduate orchestral percussion programs in the world. Most of my classmates during that time now have big orchestra jobs such as the Metropolitan opera and the Oregon Symphony. The program was very structured and formulaic. I am convinced that having studied under Tom Freer laid the foundation for me to have the capacity to do well in data science. So, thank you Tom! Whenever I get a chance I love to work on a music data modeling project, but this is the most ambition project I have tried yet and has also turned out to be the most rewarding.
 
 ***For this post I will explore the limits of the [deepBach](https://arxiv.org/abs/1612.01010) modeling approach to generate music with deep neural networks.***
 
@@ -64,8 +64,21 @@ tf.one_hot(indices, depth,
 
 ```
 
-The model utilizes stacked lstm models as illustrated in the image below:
+This model follows metadata sequences in which the conditional probability distribution is defined below:
+{pi,t(Vit|V\i,t,M, θi,t)} i∈[4],t∈[T]
 
+Vit indicates the voice i at time index t and V\i,t are all variables in V except for the variable Vit. So that the time can be invariant so that sequences of any size can be used, the parameters are shared between all conditional probability distributions in the same voice:
+θi:= θi,t, pi:= pi,t ∀t ∈ [T].
+
+Then each of the conditional probability distributions are fit to the data by maximizing the log-likigood. This results in four classification problems represented mathematically below:
+
+maxθiXtlog pi(Vti|V\i,t,M, θi), for i ∈ [4], 
+
+This in effect predicts a note knowing the value of its neighboring notes. Each classifier is fit using four neural networks. Two of which are deep neural networks, one dedicated to summing past information and the other summing future information in conjunction with a non-recurrent NN for notes occuring at the same time. The output from the last recurrent neural network is preserved and the three outputs are merged and used in the fourth neural network with output:
+
+pi(Vti|V\i,t,M, θ)
+
+The illustration below shows the stacked models described above:
 
 ![alt text](/img/LSTMref.JPG "Model reference")
 
