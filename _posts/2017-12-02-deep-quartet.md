@@ -156,7 +156,7 @@ tf.one_hot(indices, depth,
 
 This model follows metadata sequences in which the conditional probability distribution is defined below:
 
-![alt text](/img/ProbDist1_.JPG "Deep Bach")
+![alt text](/img/ProbDist1.JPG "Deep Bach")
 {pi,t(Vit|V\i,t,M, θi,t)} i∈[4],t∈[T]
 
 Vit indicates the voice i at time index t and V\i,t are all variables in V except for the variable Vit. So that the time can be invariant so that sequences of any size can be used, the parameters are shared between all conditional probability distributions in the same voice:
