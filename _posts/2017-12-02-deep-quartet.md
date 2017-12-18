@@ -46,7 +46,7 @@ driver = webdriver.Firefox(firefox_profile=firefox_profile)
 driver.get('http://www.kunstderfuge.com/-/db/log-in.asp')
 ```
 
-Before continuing, make sure that you have subscribed to Kunst Der Fuge website if you haven't already. I am frugal so I chose to pay less and scrape the files I wanted. If you want to skip this process and pay more you can download the midi database
+Before continuing, make sure that you have subscribed to Kunst Der Fuge website if you haven't already. I am frugal so I chose to pay less and scrape the files I wanted. If you want to skip this process and pay more you can download the midi database.
 
 Next Authenticate into the website in order to access the files.
 
@@ -64,7 +64,7 @@ driver.find_element_by_name("Submit").click()
 
 ```
 
-After authenticating into the website, we will need to navigate to the midi section of the website
+After authenticating into the website, we will need to navigate to the midi section of the website.
 
 ```python
 # find all the midi elements by xpath
@@ -94,7 +94,20 @@ for elem in elems:
 
 ```
 
-By adding the string quartet files there was a 830% increase in the the count of notes from what was used in the original deepBach study. So there was just over half the number of string quartet files as Bach files, however the string quartet files contain much more notes. I experimented with subsetting the string quartets into smaller files to sort of standardize the size of the files, but that approach did not yeild very complelling or statistically accurate results. I also conducted a z test to check the proportion of the notes in terms of frequency and note duration combinations as plotted below, the p value from the test was 7x10-43, thus there is evidence of a difference in the proportion of notes between the Bach chorales and the new string quartets I added. We can see that notes with smaller durations are more common in the string quartet files than in the Bach Chorale files. In other words, it is more common to have faster notes in the string quartets than in the Bach compositions. See my [Project Build](https://github.com/KKONZ/SpringBoard/tree/master/Capstone%201) for more details on this project.
+By adding the string quartet files there was a 830% increase in the the count of notes from what was used in the original deepBach study. So there was just over half the number of string quartet files as Bach files, however the string quartet files contain much more notes. I experimented with subsetting the string quartets into smaller files to sort of standardize the size of the files, but that approach did not yeild very complelling or statistically accurate results. 
+
+I also conducted a z test to check the proportion of the notes in terms of frequency and note duration combinations as plotted below, the p value from the test was 7x10-43, thus there is evidence of a difference in the proportion of notes between the Bach chorales and the new string quartets I added. Below is the code I used to conduct that test
+
+
+I used the music21 package to analyze the note compositions of the Bach data set and the String Quartets separetly. If pip is installed, the following snippet can be used to download the package.
+
+```python
+pip install music21
+```
+
+
+
+We can see that notes with smaller durations are more common in the string quartet files than in the Bach Chorale files. In other words, it is more common to have faster notes in the string quartets than in the Bach compositions. See my [Project Build](https://github.com/KKONZ/SpringBoard/tree/master/Capstone%201) for more details on this project.
 
 
 <img src="/img/Bach__Notes.svg" alt="StringNotes" />
