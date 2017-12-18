@@ -152,7 +152,7 @@ tf.one_hot(indices, depth,
 #   [0.0, 0.0, 0.0]]]  # one_hot(-1)
 
 ```
-
+![alt text](/img/VITfirst.jpg "Deep Bach")
 This model follows metadata sequences in which the conditional probability distribution is defined below:
 
 {pi,t(Vit|V\i,t,M, θi,t)} i∈[4],t∈[T]
