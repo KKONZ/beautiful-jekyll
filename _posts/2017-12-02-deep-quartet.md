@@ -152,7 +152,7 @@ tf.one_hot(indices, depth,
 #   [0.0, 0.0, 0.0]]]  # one_hot(-1)
 
 ```
-![alt text](/img/VITfirst.JPG "Deep Bach")
+![alt text](/img/VITfirst_.JPG "Deep Bach")
 
 This model follows metadata sequences in which the conditional probability distribution is defined below:
 
