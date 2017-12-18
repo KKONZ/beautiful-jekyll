@@ -76,6 +76,24 @@ for ii in MIDI:
 driver.get(link)
 ```
 
+The last step is to download the actual string quartets, below is the method used to extract the Beethoven files. The full script can be found [here]("https://github.com/KKONZ/SpringBoard/blob/master/Capstone%201/KunstDerFuge.com-Selenium.ipynb), note that the format of the website varies a bit from composer to composer.
+
+```python
+# find the Beethoven Chamber element by xpath
+BeethovenChamber = driver.find_elements_by_xpath("//*[text()='Chamber music']")
+# extract the URL for the the xpath
+for ii in BeethovenChamber:
+    link = ii.get_attribute('href')
+# Navigate to the Beethoven Chamber music page
+driver.get(link)
+# Click on each of the quartet midi links 
+elems = driver.find_elements_by_xpath("//a[contains(@href, 'quartet')]")
+for elem in elems:
+    elem.click()
+    time.sleep(3)
+
+```
+
 By adding the string quartet files there was a 830% increase in the the count of notes from what was used in the original deepBach study. So there was just over half the number of string quartet files as Bach files, however the string quartet files contain much more notes. I experimented with subsetting the string quartets into smaller files to sort of standardize the size of the files, but that approach did not yeild very complelling or statistically accurate results. I also conducted a z test to check the proportion of the notes in terms of frequency and note duration combinations as plotted below, the p value from the test was 7x10-43, thus there is evidence of a difference in the proportion of notes between the Bach chorales and the new string quartets I added. We can see that notes with smaller durations are more common in the string quartet files than in the Bach Chorale files. In other words, it is more common to have faster notes in the string quartets than in the Bach compositions. See my [Project Build](https://github.com/KKONZ/SpringBoard/tree/master/Capstone%201) for more details on this project.
 
 
