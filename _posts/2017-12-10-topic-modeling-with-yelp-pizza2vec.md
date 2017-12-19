@@ -133,14 +133,14 @@ Tensorflow has awesome documentation; go there and or their github repositories 
 
 ### t-sne
 
-Next we use a dimension reduction technique called t-distributed neighbor embedding, t-sne. This reduces the dimensional space to an x-y coordinate space, and similar topic words will be clustered together. Unlike PCA dimension reduction, t-sne is based on probability distributions with random walk on neighborhood graphs to retain both the local and global structrues in the data. The first step is to convert the high-dimensional Euclidean distances to conditional probabilities showing similarities see the mathematical representation below:
+Next we use a dimension reduction technique called t-distributed neighbor embedding, t-sne. This reduces the dimensional space to an x-y coordinate space, and similar topic words will be clustered together. Unlike PCA dimension reduction, t-sne is based on probability distributions with random walk on neighborhood graphs to retain both the local and global structrues in the data. The first step is to convert the high-dimensional Euclidean distances between points into conditional probabilities showing similarities see the mathematical representation below:
 
 <img src= "https://wikimedia.org/api/rest_v1/media/math/render/svg/2cc3ef3b4d237787cd82e5ef638d96d642a1e43d" alt="hd">
 
-For high dimensionality space
+For high dimensionality space, the similarity of 2 points are decided in proportion to their probabilty density centered under a Gaussian at xi.
 <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/57d2ef3df60acdb53bdf90535264041fea7231cd" alt= "xi"> and <img src= "https://wikimedia.org/api/rest_v1/media/math/render/svg/da7e57d3f8c537992b45488f9586aec0c35a85f0" alt="xj">. 
 
-For low dimenionality, the conditional probabilty is mathematically represented below:
+For low dimensionality, the conditional probabilty is mathematically represented below:
 
 
 <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/332b46963d03a1fa12b1d6524652c43efc60930e" alt = "ld">
@@ -194,7 +194,7 @@ The images above were borrowed from the t-sne wikipedia pages and this [blog](ht
 
 ### Clustering 
 
-It is very common to use KMeans as a clustering solution after performing t-sne reduction. I experimented first computing a variety of kernals and found, based on the silhouette scores, that 3 and 7 kernals did the best. Both of those solutions miss clustered some obvious kernals though, splitting them in half. Next I tried DBSCAN but that solution had trouble discerning a signal from the noise creating 125 different kernals where the vast majority of observations were assigned to one cluster and only a few words were assigned to the remaining 124 kernals. 
+It is very common to use KMeans as a clustering solution after performing t-sne reduction. I experimented first computing a variety of kernels and found, based on the silhouette scores, that 3 and 7 kernels did the best. Both of those solutions mis-clustered some obvious kernels though, splitting them in half. Next I tried DBSCAN but that solution had trouble discerning a signal from the noise creating 125 different kernels where the vast majority of observations were assigned to one cluster and only a few words were assigned to the remaining 124 kernels. 
 
 
 Spectral Clustering, a clear winner! The code below represents how I trained the clustering algorithm using the python package sklearn.
@@ -207,11 +207,11 @@ from sklearn.cluster import SpectralClustering
 sc = SpectralClustering(affinity = 'nearest_neighbors', assign_labels = 'kmeans'
 ```
 
-Going a bit deeper, spectral clustering varies from kmeans in how the distances are computed. Geometrically speaking, Kmeans uses the distance between points where as Spectral Clustering uses the graph distance, in this case nearest-neighbor. In addition I specified kmeans label as opposed discrete, this allows for finer granularity of clustering, it can prove to be unstable and unreproducible but seems to work remarkably well for this problem.
+Going a bit deeper, spectral clustering varies from kmeans in how the distances are computed. Geometrically speaking, Kmeans uses the distance between points where as Spectral Clustering uses the graph distance, in this case nearest-neighbor. In addition I specified kmeans label as opposed to discrete, which allows for finer granularity of clustering. It can prove to be unstable and unreproducible, but seems to work remarkably well for this problem.
 
 ### Visualization
 
-The interactive plot below was created in Bokeh, in order to get the plot to have all the functionality I wanted, the size of the html code ended up being really huge. In order to optimze the performance, I used WebGL back which can be enabled in one line of code.
+The interactive plot below was created in Bokeh. In order to get the plot to have all the functionality I wanted, the size of the html code ended up being really huge. To optimze the performance, I used WebGL back which can be enabled in one line of code.
 
 
 <html lang="en">
@@ -284,14 +284,14 @@ The interactive plot below was created in Bokeh, in order to get the plot to hav
 </html>
 
 
-Great so I have an interactive plot that looks like a cheap knock off of a google chrome logo, so what can I do with this? 
+Great, so I have an interactive plot that looks like a cheap knock off of a google chrome logo; so what can I do with this? 
 
-If we examine the clusters closely we can see that the combination of t-sne/spectral clustering came up with some really interesting results! Below is my interpretations of what each of the clusters represent.
+If we examine the clusters closely we can see that the combination of t-sne/spectral clustering came up with some really interesting results! Below are my interpretations of what each of the clusters represent.
 
 #### The words represented in the follow topic clusters:
 
 
-* <span style="color:black"><font size="5.5">Black Cluster</font></span>. There is a bit of peridolia for me with this cluster. The right eye of this perhaps inhebrated smiley face is devoted to booze and the left eye is a cluster related to deserts. The mouth or lower region is related to mouth feel, texture, and presentation.
+* <span style="color:black"><font size="5.5">Black Cluster</font></span>. There is a bit of pareidolia for me with this cluster. The right eye of this perhaps inebriated smiley face is devoted to booze and the left eye is a cluster related to deserts. The mouth or lower region is related to mouth feel, texture, and presentation.
 
 * <span style="color:yellow"><font size="5.5">Yellow Cluster</font></span>. Words in this cluster are related to price. This is a pretty isolated cluster, relatively speaking, and is very dense compared to the spread of the other clusters.
 
