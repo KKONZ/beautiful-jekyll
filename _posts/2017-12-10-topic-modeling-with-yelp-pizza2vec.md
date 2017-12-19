@@ -4,7 +4,8 @@ published: true
 title: 'Topic Modeling with Yelp, Pizza2vec'
 ---
 ## Topic Modeling in Yelp
-One of my favorite things in this wonderful world is a good pizza. Arguably my first real love, pizza has taught me some of the most important things to be learn in life. Beyond making dinner suggestions incredibly easy, good pizza will ALWAYS make that list, I was fortunate enough to gain some foundational business experience having managed a local pizza shop in cozy St. Cloud MN as a teen. 
+
+One of my favorite things in this wonderful world is a good pizza. Arguably my first real love, pizza has taught me some of the most important things to be learned in life. Beyond making dinner suggestions incredibly easy, good pizza will ALWAYS make that list. Also, I was fortunate enough to gain some foundational business experience as a teen in cozy St. Cloud, MN, where I managed a local pizza shop.
 
 <img src="https://s3-media4.fl.yelpcdn.com/bphoto/f8yLBjYmCwiB3BnfYh8d-g/o.jpg" alt="Lombardi's">
 
@@ -17,7 +18,7 @@ It turns out Yelp offers a _slice_ of their data for academic purposes as well a
 
 ### Read the data into Python
 
-The data that was used for the post can be downloaded from the following URL [Yelp Dataset](https://www.yelp.com/dataset/challenge "10th Iteration Data"). The data is available in both SQL and JSON, I chose to download the JSON version and read the data into python with JSON package I used codecs to iterate through the json files and write to txt files. Instead of topic modeling on the entire roughly 3 million review restaurants, I chose instead to subset to reviews that contained the word pizza. There is a phenomenal pycon presentation from Patrick Harrison on modern natural language, I used the same approach as his tutorial, except my version subsets the data to just the reviews including pizza and my version also explores clustering solutions. I highly recomend watching that video if you are intersted in learning more about what is going on behind the hood for common natural language processing transformations. A general snippet for reading the business and review data files is shown below. The code used to read, clean, and model the data can be found in my github repo [using this link](https://github.com/KKONZ/SpringBoard/blob/master/Capstone%202/Pizza2vec.ipynb).
+The data that was used for the post can be downloaded from the following URL [Yelp Dataset](https://www.yelp.com/dataset/challenge "10th Iteration Data"). The data is available in both SQL and JSON, I chose to download the JSON version. I read the data into python with JSON package I used codecs to iterate through the JSON files and write the data to disk. Instead of topic modeling on the entire roughly 3 million review restaurants, I chose instead to subset to reviews that contained the word pizza. There is a phenomenal pycon presentation from Patrick Harrison on modern natural language available [here](https://www.youtube.com/watch?v=6zm9NC9uRkk). I used the same general approach as his tutorial and additionally added clustering to the word vectors to make the results more interpretable. I highly recommend watching that video if you are interested in learning more about modern natural language processing. A general snippet for reading the business and review data files is shown below. The code used to read, clean, and model the data can be found in my github repo [using this link](https://github.com/KKONZ/SpringBoard/blob/master/Capstone%202/Pizza2vec.ipynb).
 
 ```python
 import os
@@ -33,15 +34,15 @@ with codecs.open(filepath, encoding='utf_8') as f:
 
 ### Preparing the text for modeling
 
-Text data can be very highly dimensional. If proper steps are not taken to clean the text data then one should not expect to have a very accurate or useful model. To clean the data, I  tokenized the spaces and punctions, lemmatized the data which is is the process of text normaliztion, for casing of letters, contractions, and whatnot. I also created uni, bi, and trigram sentences, this combines common words found in the corpus together to a single word representation of the word such as ny_style_pizza.
-All of the natural language processing has thus far been achieved using the python package Spacy. You can build you own stopword vocabulary in Spacy. I did choose to use NLTK to remove stopwords as they have a list ready to use out of the box. To do this step in Spacy I would have to build my own stopword dictionary and decided that wasn't necessary for this project. Finally I used Latent Direlecht Allocation to transform the data into a bag of words representation.
+Text data can be very highly dimensional. If proper steps are not taken to clean the text data, then one should not expect to have a very accurate or useful model. To clean the data I tokenized the spaces and punctuations and lemmatized the data. Lemmatization being is the process of text normalization for casing of letters contractions and whatnot. I also created uni, bi, and trigram sentences, this combines common words found in the corpus together to a single word representation of the word such as ny_style_pizza.
+All of the natural language processing has thus far been achieved using the python package Spacy. I could have built my own stopword vocabulary in Spacy, but that would require building my own stopword dictionary. So I chose NLTK to remove stopwords, as they have a list ready to use out of the box. Finally I used Latent Direlecht Allocation to transform the data into a bag-of-words representation.
 
 
 ### Word2vec
 
-The first step in modeling the data was to use the package Gensim to represent the words in a highly dimensional vector space to create a continuous bag of words word2vec model. This uses a discriminate approach using a binary logistic regression classification object for target words, <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="bold">w</mi><mi mathvariant="bold">t</mi></msub></math>, and <math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="bold">k</mi></math> imaginary words <math xmlns="http://www.w3.org/1998/Math/MathML"><mover><mi mathvariant="bold">w</mi><mo stretchy="false">&#x007E;<!-- ~ --></mo></mover></math>
+The first step in modeling the data was to use the package Gensim to represent the words in a highly dimensional vector space to create a continuous bag-of-words word2vec model. This uses a discriminate approach using a binary-logistic regression-classification object for target words. <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="bold">w</mi><mi mathvariant="bold">t</mi></msub></math>, and <math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="bold">k</mi></math> imaginary words <math xmlns="http://www.w3.org/1998/Math/MathML"><mover><mi mathvariant="bold">w</mi><mo stretchy="false">&#x007E;<!-- ~ --></mo></mover></math>
 
-Below is an illustration of what is happening in continuous bag of word modeling. 
+Below is an illustration of what is happening in continuous bag-of-words modeling. 
 
 <img src="https://www.tensorflow.org/images/nce-nplm.png" alt="CBOW">
 
@@ -125,19 +126,19 @@ This maximization objective is represented mathematically below
   </mrow>
 </math>
 
-where <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="bold">Q</mi><mi mathvariant="bold">&#x03B8;<!-- θ --></mi></msub><mo stretchy="false" mathvariant="bold">(</mo><mi mathvariant="bold">D</mi><mo mathvariant="bold">=</mo><mn mathvariant="bold">1</mn><mo stretchy="false" mathvariant="bold">|</mo><mi mathvariant="bold">w</mi><mo mathvariant="bold">,</mo><mi mathvariant="bold">h</mi><mo stretchy="false" mathvariant="bold">)</mo></math> is binary logistic regression probabilty of seeing <math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="bold">w</mi></math> in context <math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="bold">h</mi></math> of dataset <math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="bold">D</mi></math> in embedded learned vectors <math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="bold">&#x03B8;<!-- θ --></mi></math> where <math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="bold">k</mi></math>.
+where <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="bold">Q</mi><mi mathvariant="bold">&#x03B8;<!-- θ --></mi></msub><mo stretchy="false" mathvariant="bold">(</mo><mi mathvariant="bold">D</mi><mo mathvariant="bold">=</mo><mn mathvariant="bold">1</mn><mo stretchy="false" mathvariant="bold">|</mo><mi mathvariant="bold">w</mi><mo mathvariant="bold">,</mo><mi mathvariant="bold">h</mi><mo stretchy="false" mathvariant="bold">)</mo></math> is binary logistic regression probabilty of seeing <math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="bold">w</mi></math> in context <math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="bold">h</mi></math> of dataset <math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="bold">D</mi></math> in embedded learned vectors <math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="bold">&#x03B8;<!-- θ --></mi></math> where <math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="bold">k</mi></math> represents noise words.
 
 The images and mathML code were borrowed from [Tensorflow](https://www.tensorflow.org/tutorials/word2vec).
-Tensorflow has awesome documentation, go there and or their github repositories to learn more.
+Tensorflow has awesome documentation; go there and or their github repositories to learn more.
 
 ### t-sne
 
-Next we use a dimension reduction technique called t distributed neighbor embedding, t-sne. This reduced the dimensional space to an x and a y coordinate and similar topic words will be clustered together. Unlike PCA dimension reduction, t-sne is based on probability distributions with random walk on neighborhood graphs to retain both the local and global structrues in the data. The first step is to convert the high-dimensional Euclidean distances to conditional probabilities showing similarities see the mathematical representation below:
+Next we use a dimension reduction technique called t-distributed neighbor embedding, t-sne. This reduces the dimensional space to an x-y coordinate space, and similar topic words will be clustered together. Unlike PCA dimension reduction, t-sne is based on probability distributions with random walk on neighborhood graphs to retain both the local and global structrues in the data. The first step is to convert the high-dimensional Euclidean distances to conditional probabilities showing similarities see the mathematical representation below:
 
 <img src= "https://wikimedia.org/api/rest_v1/media/math/render/svg/2cc3ef3b4d237787cd82e5ef638d96d642a1e43d" alt="hd">
 
-The proportion of the probabilty follows a Gaussian normal distribution for the probability of 
-<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/57d2ef3df60acdb53bdf90535264041fea7231cd" alt= "xi"> and <img src= "https://wikimedia.org/api/rest_v1/media/math/render/svg/da7e57d3f8c537992b45488f9586aec0c35a85f0" alt="xj"> for high dimensionality space. 
+For high dimensionality space
+<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/57d2ef3df60acdb53bdf90535264041fea7231cd" alt= "xi"> and <img src= "https://wikimedia.org/api/rest_v1/media/math/render/svg/da7e57d3f8c537992b45488f9586aec0c35a85f0" alt="xj">. 
 
 For low dimenionality, the conditional probabilty is mathematically represented below:
 
