@@ -127,7 +127,7 @@ This maximization objective is represented mathematically below
 
 where <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="bold">Q</mi><mi mathvariant="bold">&#x03B8;<!-- θ --></mi></msub><mo stretchy="false" mathvariant="bold">(</mo><mi mathvariant="bold">D</mi><mo mathvariant="bold">=</mo><mn mathvariant="bold">1</mn><mo stretchy="false" mathvariant="bold">|</mo><mi mathvariant="bold">w</mi><mo mathvariant="bold">,</mo><mi mathvariant="bold">h</mi><mo stretchy="false" mathvariant="bold">)</mo></math> is binary logistic regression probabilty of seeing <math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="bold">w</mi></math> in context <math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="bold">h</mi></math> of dataset <math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="bold">D</mi></math> in embedded learned vectors <math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="bold">&#x03B8;<!-- θ --></mi></math> where <math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="bold">k</mi></math>.
 
-The images and mathML code were borrowed from [Tensorflow]("https://www.tensorflow.org/tutorials/word2vec").
+The images and mathML code were borrowed from [Tensorflow](https://www.tensorflow.org/tutorials/word2vec).
 Tensorflow has awesome documentation, go there and or their github repositories to learn more.
 
 ### t-sne
@@ -189,7 +189,7 @@ Finally we will look at Perplexity, which is defined mathematically below as 2 r
 </math>
 
 Perplexity can be thought of as a high dimensionality smoothing mechanisim. 
-The images above were borrowed from the t-sne wikipedia pages and this [blog]("http://jdetle.com/2016/08/17/tSNE-part2/")
+The images above were borrowed from the t-sne wikipedia pages and this [blog](http://jdetle.com/2016/08/17/tSNE-part2/)
 
 ### Clustering 
 
