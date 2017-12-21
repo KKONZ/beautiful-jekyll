@@ -156,15 +156,15 @@ tf.one_hot(indices, depth,
 
 This model follows metadata sequences in which the conditional probability distribution is defined below:
 
-![alt text](/img/ProbDist1_.JPG "Deep Bach")
+![alt text](/img/Prob1.JPG "Deep Bach")
 
 Vit indicates the voice i at time index t and ![alt text](/img/Vit_.JPG "Deep Bach") are all variables in V except for the variable ![alt text](/img/VITfirst__.JPG "Deep Bach"). So that the time can be invariant so that sequences of any size can be used, the parameters are shared between all conditional probability distributions in the same voice:
 
-![alt text](/img/ProbDist1_.JPG "Deep Bach")
+![alt text](/img/Probs2.JPG "Deep Bach")
 
 Then each of the conditional probability distributions are fit to the data by maximizing the log-likigood. This results in four classification problems represented mathematically below:
 
-![alt text](/img/MaxLog_.JPG "Deep Bach")
+![alt text](/img/MaxLog.JPG "Deep Bach")
 
 This in effect predicts a note, based off of the value of its neighboring notes. Each classifier is fit using four neural networks. Two of which are deep neural networks, one dedicated to summing past information and the other summing future information in conjunction with a non-recurrent NN for notes occuring at the same time. The output from the last recurrent neural network is preserved and the three outputs are merged and used in the fourth neural network with output:
 
