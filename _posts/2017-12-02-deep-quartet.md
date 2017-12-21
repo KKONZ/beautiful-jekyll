@@ -252,4 +252,5 @@ Going to California:
 
 
 ## Conclusions:
-When choosing a file to reharmonize, it seemed that  files where all of the voices are moving train more compelling output than when the voices more or less just outline the harmonic changes in block chords. Overall I was happy with the output from this modeling technique and this has been an incredibly rewarding project to work on. 
+When choosing a file to reharmonize, it seemed that  files where all of the voices are moving train more compelling output than when the voices more or less just outline the harmonic changes in block chords. Overall I was happy with the output from this modeling technique and this has been an incredibly rewarding project to work on. This has been an incredibly rewarding project to work on. The vast majority of the classical music that I have studied is orchestral music, listening to and modeling the string quartets has given me extra appreciation for the composers that I have long enjoyed. While, in my opinion, the music of Beethoven and Mozart is irreplaceable this approach allows us to merge the styles of various composers and get a fresh prespective on their collective genius. 
+
