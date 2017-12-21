@@ -168,7 +168,7 @@ Then each of the conditional probability distributions are fit to the data by ma
 
 This in effect predicts a note, based off of the value of its neighboring notes. Each classifier is fit using four neural networks. Two of which are deep neural networks, one dedicated to summing past information and the other summing future information in conjunction with a non-recurrent NN for notes occuring at the same time. The output from the last recurrent neural network is preserved and the three outputs are merged and used in the fourth neural network with output:
 
-pi(Vti|V\i,t,M, θ)
+![alt text](/img/Probs3.JPG "Deep Bach")
 
 The illustration below shows the stacked models described above:
 
