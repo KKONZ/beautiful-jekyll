@@ -15,13 +15,13 @@ Prior to becoming a data scientist, I was lucky enough to study in one of the fi
 
 ***For this post I will explore the limits of the [deepBach](https://arxiv.org/abs/1612.01010) modeling approach to generate music with deep neural networks.***
 
-The code is open sourced and can be found under [SONY deepBach](https://github.com/Ghadjeres/DeepBach), the Bach chorale corpus for that research is readily availble in the music21 package. I wanted to explore expanding the corpus to include compositions from after the baroque peroid as well. One of the constraints of this modeling techinque is that there has to be the same number of voices for each training composition. The Bach files used for the initial research have four part harmonies so I decided to add string quartets from the classical, romantic, and nationalist periods as they have the same number of voices.
+The code is open sourced and can be found under [SONY deepBach](https://github.com/Ghadjeres/DeepBach), the Bach chorale corpus for that research is readily available in the music21 package. I wanted to explore expanding the corpus to include compositions from after the baroque period as well. One of the constraints of this modeling technique is that there must be the same number of voices for each training composition. The Bach files used for the initial research have four part harmonies so I decided to add string quartets from the classical, romantic, and nationalist periods as they have the same number of voices.
 
 ## Additional data, string quartets
 
-In addition to the roughly 350 Bach chorale files from the original research, I am added 189 string quartet midi files from Beethoven, Mozart, Shostakovich, Brahms, Schumann, Schubert, and others. To gather the additional string quartet midi files, I wrote a script to scrape the files I wanted from site [Kunst Der Fuge](http://kunstderfuge.com/) with [Selenium](http://selenium-python.readthedocs.io/) using the Python wrapper. Below is a snippet for this was acheived, I used the gecko driver with firefox to obtain the additional string quartets.
+In addition to the roughly 350 Bach chorale files from the original research, I am added 189 string quartet midi files from Beethoven, Mozart, Shostakovich, Brahms, Schumann, Schubert, and others. To gather the additional string quartet midi files, I wrote a script to scrape the files I wanted from site [Kunst Der Fuge](http://kunstderfuge.com/) with [Selenium](http://selenium-python.readthedocs.io/) using the Python wrapper. Below is a snippet for this was achieved, I used the gecko driver with Firefox to obtain the additional string quartets.
 
-If you have pip installed on your computer, you can use the following command to download the python library
+If you have pip installed on your computer, you can use the following command to download the python library.
 
 ```python
 pip install -U selenium
@@ -29,7 +29,7 @@ pip install -U selenium
 
 Follow the [Gecko driver]("https://github.com/mozilla/geckodriver/releases") instructions to download the appropriate driver for Firefox.
 
-Next setup the preferences for the browser
+Next setup the preferences for the browser.
 
 ```python
 # Instantiate a webdriver profile
@@ -94,12 +94,12 @@ for elem in elems:
 
 ```
 
-By adding the string quartet files there was a 730% increase in the the count of notes from what was used in the original deepBach study. So there was just over half the number of string quartet files as Bach files, however the string quartet files contain much more notes. I experimented with subsetting the string quartets into smaller files to sort of standardize the size of the files, but that approach did not yeild very complelling or statistically accurate results. 
+By adding the string quartet files there was a 730% increase in the count of notes from what was used in the original deepBach study. So there was just over half the number of string quartet files as Bach files, however the string quartet files contain much more notes. I experimented with subsetting the string quartets into smaller files to sort of standardize the size of the files, but that approach did not yield very compelling or statistically accurate results. 
 
-I also conducted a z test to check the proportion of the notes in terms of frequency and note duration combinations as plotted below, the p value from the test was 7x10-43, thus there is evidence of a difference in the proportion of notes between the Bach chorales and the new string quartets I added. Below is the code I used to conduct that test
+I also conducted a z test to check the proportion of the notes in terms of frequency and note duration combinations as plotted below, the p value from the test was 7x10-43, thus there is evidence of a difference in the proportion of notes between the Bach chorales and the new string quartets I added. Below is the code I used to conduct that test.
 
 
-I used the music21 package to analyze the note compositions of the Bach data set and the String Quartets separetly. If pip is installed, the following snippet can be used to download the package.
+I used the music21 package to analyze the note compositions of the Bach data set and the String Quartets separately. If pip is installed, the following snippet can be used to download the package.
 
 ```python
 pip install music21
@@ -116,7 +116,7 @@ We can see that notes with smaller durations are more common in the string quart
 <img src="/img/Strings__Notes.svg" alt="StringNotes" />
 
 
-I put in fairly exhaustive efforts somehow balance the midi files since there were fewer of those compositions but their size was on average so much bigger than the chorale files. I wanted to start by taking each of the string quartet files and chopping them up into 20 measure sequences. This lended itself to hours and hours which turned into months of banging my head against the wall. I ended up pushing a couple contriubtions to the MIT maintained package music21 but was experiencing a lot of issues. Mainly that notes with complex subdivisions would end up ringing forever when writing the music 'streams' to midi and by the end of the sequences there would often be 5-10 notes with endless durations making for a dissonant and noisy files. I also tried using pretty-midi which appeared to note produce any noticeable issues with note complexity but was evidentally producing a number of files that would cause errors for some reason mid-train. I successfully trained over 100 of the chopped files but ended up abandoning that approach because the cleaning process was creating issues and the test accuracy was also not very good with this approach compared to using the full files.
+I put in fairly exhaustive efforts somehow balance the midi files since there were fewer of those compositions but their size was on average so much bigger than the chorale files. I wanted to start by taking each of the string quartet files and chopping them up into 20 measure sequences. This lent itself to hours and hours which turned into months of banging my head against the wall. I ended up pushing a couple contributions to the MIT maintained package music21 but was experiencing a lot of issues. Mainly that notes with complex subdivisions would end up ringing forever when writing the music 'streams' to midi and by the end of the sequences there would often be 5-10 notes with endless durations making for dissonant and noisy files. I also tried using pretty-midi which appeared to note produce any noticeable issues with note complexity but was evidently producing many files that would cause errors for some reason mid-train. I successfully trained over 100 of the chopped files but ended up abandoning that approach because the cleaning process because I was only getting testing accuracy scores of roughly 60% whereas using the full files yielded an average test accuracy score of roughly 83%.
 
 
 # Training the model
@@ -162,11 +162,11 @@ Vit indicates the voice i at time index t and ![alt text](/img/Vit_.JPG "Deep Ba
 
 ![alt text](/img/Probs2.JPG "Deep Bach")
 
-Then each of the conditional probability distributions are fit to the data by maximizing the log-likigood. This results in four classification problems represented mathematically below:
+Then each of the conditional probability distributions are fit to the data by maximizing the log-likelihood. This results in four classification problems represented mathematically below:
 
 ![alt text](/img/MaxLog____.JPG "Deep Bach")
 
-This in effect predicts a note, based off of the value of its neighboring notes. Each classifier is fit using four neural networks. Two of which are deep neural networks, one dedicated to summing past information and the other summing future information in conjunction with a non-recurrent NN for notes occuring at the same time. The output from the last recurrent neural network is preserved and the three outputs are merged and used in the fourth neural network with output:
+This in effect predicts a note, based off the value of its neighboring notes. Each classifier is fit using four neural networks. Two of which are deep neural networks, one dedicated to summing past information and the other summing future information in conjunction with a non-recurrent NN for notes occurring at the same time. The output from the last recurrent neural network is preserved and the three outputs are merged and used in the fourth neural network with output:
 
 ![alt text](/img/Probs3.JPG "Deep Bach")
 
@@ -174,9 +174,9 @@ The illustration below shows the stacked models described above:
 
 ![alt text](/img/LSTMref.JPG "Model reference")
 
-Generation in the depedency networks is done by utlizing pseudo-gibbs sampling, where the conditional distributions are potentially incompatible and that the conditional distributions are not neccesssairly from a joint distribution p(V). This Markov chain does converge to another stationary distribution and applications on real data demonstrated this method yeilded accurate joint probabilities.
+Generation in the dependency networks is done by utilizing pseudo-Gibbs sampling, where the conditional distributions are potentially incompatible and that the conditional distributions are not necessarily from a joint distribution p(V). This Markov chain does converge to another stationary distribution and applications on real data demonstrated this method yielded accurate joint probabilities.
 
-The results from this modeling technique seem to speak for themselves. See the results of the “Bach or Computer” experiment below. The figure shows the distribution of the votes between “Computer” (bluebars) and “Bach” (red bars) for each model and each level of expertiseof the voters (from 1 to 3). The J.S.Bach field are actual Bach compositions and MLP stands for a multi-layer perceptron and MaxEnt stands for Maximum Entropy
+The results from this modeling technique seem to speak for themselves. See the results of the “Bach or Computer” experiment below. The figure shows the distribution of the votes between “Computer” (bluebars) and “Bach” (red bars) for each model and each level of expertise of the voters (from 1 to 3). The J.S.Bach field are actual Bach compositions and MLP stands for a multi-layer perceptron and MaxEnt stands for Maximum Entropy.
 
 
 ![alt text](/img/DeepBachBench.JPG "Deep Bach Bench")
@@ -238,7 +238,7 @@ optional arguments:
 ```
 
 
-I then added a midi file of the Led Zeppelin track Kashmir and reharmonized the model to that track and going to california as well, both were trained in the same manner as the code above, but were delibrately named in a way to be indexed in the first position. Here are sample outputs from those models:
+I then added a midi file of the Led Zeppelin track Kashmir and reharmonized the model to that track and going to California as well, both were trained in the same manner as the code above, but were deliberately  named in a way to be indexed in the first position. Here are sample outputs from those models:
 
 ## Results:
 
@@ -252,5 +252,5 @@ Going to California:
 
 
 ## Conclusions:
-When choosing a file to reharmonize, it seemed that  files where all of the voices are moving train more compelling output than when the voices more or less just outline the harmonic changes in block chords. Overall I was happy with the output from this modeling technique and this has been an incredibly rewarding project to work on. This has been an incredibly rewarding project to work on. The vast majority of the classical music that I have studied is orchestral music, listening to and modeling the string quartets has given me extra appreciation for the composers that I have long enjoyed. While, in my opinion, the music of Beethoven and Mozart is irreplaceable this approach allows us to merge the styles of various composers and get a fresh prespective on their collective genius. 
+When choosing a file to reharmonize, it seemed that files where all of the voices are moving train more compelling output than when the voices more or less just outline the harmonic changes in block chords. Overall, I was happy with the output from this modeling technique and this has been an incredibly rewarding project to work on. The vast majority of the classical music that I have studied is orchestral music, listening to and modeling the string quartets has given me extra appreciation for the composers that I have long enjoyed. While, in my opinion, the music of Beethoven and Mozart is irreplaceable this approach allows us to merge the styles of various composers and get a fresh perspective on their collective genius. 
 
