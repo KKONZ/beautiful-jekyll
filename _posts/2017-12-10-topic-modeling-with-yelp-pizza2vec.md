@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-title: 'Topic Modeling with Yelp, Pizza2vec'
+title: Pizza2vec
 ---
 ## Topic Modeling in Yelp
 
