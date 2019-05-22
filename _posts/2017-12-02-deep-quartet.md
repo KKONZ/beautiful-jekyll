@@ -116,7 +116,8 @@ We can see that notes with smaller durations are more common in the string quart
 <img src="/img/Strings__Notes.svg" alt="StringNotes" />
 
 
-I put in fairly exhaustive efforts somehow balance the midi files since there were fewer of those compositions but their size was on average so much bigger than the chorale files. I wanted to start by taking each of the string quartet files and chopping them up into 20 measure sequences. This lent itself to hours and hours which turned into months of banging my head against the wall. I ended up pushing a couple contributions to the MIT maintained package music21 but was experiencing a lot of issues. Mainly that notes with complex subdivisions would end up ringing forever when writing the music 'streams' to midi and by the end of the sequences there would often be 5-10 notes with endless durations making for dissonant and noisy files. I also tried using pretty-midi which appeared to note produce any noticeable issues with note complexity but was evidently producing many files that would cause errors for some reason mid-train. I successfully trained over 100 of the chopped files but ended up abandoning that approach because the cleaning process because I was only getting testing accuracy scores of roughly 60% whereas using the full files yielded an average test accuracy score of roughly 83%.
+Initially the string quartet files were chopped into 20 measure sequences, this proved to be problematic. Complex subdivisions would have infinite durations when converting to 'streams' from the music21. What ultimately worked the best was training on the full midi files as opposed to slicing the midi files into smaller sequences.
+
 
 
 # Training the model
@@ -252,5 +253,4 @@ Going to California:
 
 
 ## Conclusions:
-When choosing a file to reharmonize, it seemed that files where all of the voices are moving train more compelling output than when the voices more or less just outline the harmonic changes in block chords. Overall, I was happy with the output from this modeling technique and this has been an incredibly rewarding project to work on. The vast majority of the classical music that I have studied is orchestral music, listening to and modeling the string quartets has given me extra appreciation for the composers that I have long enjoyed. While, in my opinion, the music of Beethoven and Mozart is irreplaceable this approach allows us to merge the styles of various composers and get a fresh perspective on their collective genius. 
-
+When choosing a file to reharmonize, it seemed that files where all of the voices are moving train more compelling output than when the voices more or less just outline the harmonic changes in block chords. Overall, I was happy with the output from this modeling technique and this has been an incredibly rewarding project to work on. The vast majority of the classical music that I have studied is orchestral music, listening to and modeling the string quartets has given me extra appreciation for the composers that I have long enjoyed. While, in my opinion, the music of Beethoven and Mozart is irreplaceable this approach allows us to merge the styles of various composers and get a fresh perspective on their collective genius.
