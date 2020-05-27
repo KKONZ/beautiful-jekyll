@@ -4,13 +4,10 @@ published: true
 title: BertEmbeddings
 ---
 
-BERT Topic Modeling Visualization
+## BERT Topic Modeling Visualization
 
+_Bidirectional Encoder Representations from Transformers_
 
-
-
-
-<!DOCTYPE html>
 <html lang="en">
   
   <head>
