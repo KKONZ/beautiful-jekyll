@@ -7,12 +7,15 @@ subtitle: Bidirectional Encoder Representations from Transformers
 
 ## Document Similarity
 
-* Huggingface, pre-trained model released by Google that ran for many, many hours on Wikipedia and Book Corpus, a dataset containing +10,000 books of different genres
+The goal of this project is to create a context aware model for topic modeling. Traditional NLP methodologies lack the capacity to differentiate a word used for different purposes.
+
+## Bert Model
+
+* Huggingface pre-trained model released by Google that ran for many, many hours on Wikipedia and Book Corpus, a dataset containing +10,000 books of different genres
 
 * can use these models to extract high quality language features from your text data, or you can fine-tune these models on a specific task 
 
 ### Yelp data/preprocessing
-
 
 * Subset reviews to those containing restaurante businesses and have the word pizza in the review.
 
