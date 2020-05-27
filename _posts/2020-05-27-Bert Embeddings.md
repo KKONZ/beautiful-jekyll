@@ -8,6 +8,10 @@ title: BertEmbeddings
 
 _Bidirectional Encoder Representations from Transformers_
 
+* Huggingface, pre-trained model released by Google that ran for many, many hours on Wikipedia and Book Corpus, a dataset containing +10,000 books of different genres
+
+* can use these models to extract high quality language features from your text data, or you can fine-tune these models on a specific task 
+
 <html lang="en">
   
   <head>
