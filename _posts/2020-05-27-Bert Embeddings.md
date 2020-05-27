@@ -2,10 +2,10 @@
 layout: post
 published: true
 title: Bert Sentence Embeddings
-subtitle: _Bidirectional Encoder Representations from Transformers_
+subtitle: Bidirectional Encoder Representations from Transformers
 ---
 
-## Review Similarity
+## Document Similarity
 
 * Huggingface, pre-trained model released by Google that ran for many, many hours on Wikipedia and Book Corpus, a dataset containing +10,000 books of different genres
 
