@@ -1,16 +1,37 @@
 ---
 layout: post
 published: true
-title: BertEmbeddings
+title: Bert Sentence Embeddings
 ---
 
-## BERT Topic Modeling Visualization
+## _Bidirectional Encoder Representations from Transformers_ ##
 
-_Bidirectional Encoder Representations from Transformers_
+### Model data to group similiar bodies of text
 
 * Huggingface, pre-trained model released by Google that ran for many, many hours on Wikipedia and Book Corpus, a dataset containing +10,000 books of different genres
 
 * can use these models to extract high quality language features from your text data, or you can fine-tune these models on a specific task 
+
+### Yelp data/preprocessing
+
+
+* Subset reviews to those containing restaurante businesses and have the word pizza in the review.
+
+* Split each review into one sentence segements, tokenize each sentence into bert format and convert to tensors representations
+
+### Limitations of Bert
+
+* Bert is limited to 512 characters
+
+* Pretrained hugging face model is tuned for next sentence predictions 
+
+* Used 2nd to last layer of pretrained Bert model on each sentence of a review
+
+### Innovation for this project
+
+* Concatenated each sentence embedding into a single tensor
+
+* Averaged concateated embeddings (have heard of first and last chunks of sequence and text summarization to reduce the text to 512 limit)
 
 <html lang="en">
   
